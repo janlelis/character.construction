@@ -101,15 +101,17 @@ helpers do
       "<th class='mini' title='#{nice_font_name}'>" +
       nice_font_name.gsub(" ", "<br/>") +
       "</th>"
-    }.join("") + "</tr><tr><td>" + [*?A..?Z, *?a..?z].map {|letter|
+    }.join("") + "</tr><tr><td>" + [*?A..?Z, *?a..?z].map { |letter|
       fonts.map{ |font|
+        az_letter = az(letter, font)
+        az_letter_name = Unicode::Name.readable(az_letter)
         if font == :tag
-          '<span class="b2">]<span>' +
-          az(letter, font) +
+          '<span class="b2" title="' + az_letter_name + '">]<span>' +
+           az_letter +
           '</span>[</span>'
         else
-          '<span class="f">' +
-          az(letter, font) +
+          '<span class="f" title="' + az_letter_name + '">' +
+          az_letter +
           '</span>'
         end
       }.join("</td><td>")
