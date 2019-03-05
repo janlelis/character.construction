@@ -52,6 +52,9 @@ td, th {
 th {
   font-size: $base-font-size;
   font-weight: normal;
+  &.mini {
+    font-size: 10px;
+  }
 }
 
 

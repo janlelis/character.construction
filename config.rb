@@ -1,6 +1,7 @@
 require "json"
 require "characteristics/unicode"
 require "symbolify"
+require "az/kernel_method"
 
 set :css_dir, "stylesheets"
 set :images_dir, "images"
@@ -91,6 +92,22 @@ helpers do
     }.join("\n\n") + "</table>"
   end
 
+  def from_a_to_z
+    fonts = Az.fonts - [:circled_negative, :circled_upper, :squared_negative, :squared_upper, :italic_bold, :sans_italic_bold]
+    "# From A to Z\n\n" +
+    "<table><tr>" +
+    fonts.map{ |font|
+      "<th class='mini' title='#{font.to_s.capitalize}'>" +
+      font.to_s.capitalize.gsub("_", "<br/>") +
+      "</th>"
+    }.join("") + "</tr><tr><td>" + [*?A..?Z, *?a..?z].map {|letter|
+      fonts.map{ |font|
+        '<span class="f">' +
+        az(letter, font) +
+        '</span>'
+      }.join("</td><td>")
+    }.join("</td></tr><tr><td>") + "</td></tr></table>"
+  end
 
   # def list_ignorables
   #   "# List of Ignorable Characters\n\n" +

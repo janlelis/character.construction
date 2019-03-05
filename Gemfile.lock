@@ -7,6 +7,9 @@ GEM
       minitest (~> 5.1)
       thread_safe (~> 0.1)
       tzinfo (~> 1.1)
+    az (1.0.1)
+      paint (>= 0.9, < 3.0)
+      rationalist (~> 2.0)
     binding.repl (3.0.0)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
@@ -157,6 +160,7 @@ GEM
     rack-test (0.6.3)
       rack (>= 1.0)
     rake (10.4.2)
+    rationalist (2.0.0)
     rb-fsevent (0.9.6)
     rb-inotify (0.9.5)
       ffi (>= 0.5.0)
@@ -218,6 +222,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  az (~> 1.0)
   bitters
   bourbon
   builder
