@@ -93,18 +93,25 @@ helpers do
   end
 
   def from_a_to_z
-    fonts = Az.fonts - [:circled_negative, :circled_upper, :squared_negative, :squared_upper, :italic_bold, :sans_italic_bold]
+    fonts = Az.fonts - [:circled_negative, :circled_upper, :squared_negative, :squared_upper, :italic_bold, :sans_italic_bold, :fraktur_bold, :script_bold] # there are aliases for the same…
     "# From A to Z\n\n" +
     "<table><tr>" +
     fonts.map{ |font|
-      "<th class='mini' title='#{font.to_s.capitalize}'>" +
-      font.to_s.capitalize.gsub("_", "<br/>") +
+      nice_font_name = font.to_s.gsub(/(^|_)([a-z])/) do ($1.empty? ? "" : " ") + $2.upcase end
+      "<th class='mini' title='#{nice_font_name}'>" +
+      nice_font_name.gsub(" ", "<br/>") +
       "</th>"
     }.join("") + "</tr><tr><td>" + [*?A..?Z, *?a..?z].map {|letter|
       fonts.map{ |font|
-        '<span class="f">' +
-        az(letter, font) +
-        '</span>'
+        if font == :tag
+          '<span class="b2">]<span>' +
+          az(letter, font) +
+          '</span>[</span>'
+        else
+          '<span class="f">' +
+          az(letter, font) +
+          '</span>'
+        end
       }.join("</td><td>")
     }.join("</td></tr><tr><td>") + "</td></tr></table>"
   end

@@ -284,6 +284,15 @@ a {
   }
 }
 
+.b2 {
+  cursor: pointer;
+  font-size: 30px;
+  display: inline-block;
+  span {
+    white-space: pre;
+  }
+}
+
 .fc {
   display: flex;
   flex-flow: row wrap;

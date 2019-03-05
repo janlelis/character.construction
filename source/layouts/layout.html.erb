@@ -11,7 +11,7 @@
 
     <script>
 function registerShake() {
-  document.querySelectorAll('.u,.n,.f,.c, .b').forEach(function(e){
+  document.querySelectorAll('.u,.n,.f,.c, .b, .b2').forEach(function(e){
     var shakeInProgressTimeout = null
     e.addEventListener('click', function(){
       if(shakeInProgressTimeout){
@@ -74,7 +74,7 @@ document.addEventListener('DOMContentLoaded', registerScroll)
           // console.log("copy: " + e.text)
         })
 
-        new ClipboardJS('.b', {
+        new ClipboardJS('.b, .b2', {
           text: function(trigger) {
             return trigger.children[0].textContent
           }
