@@ -317,6 +317,22 @@ a {
   border: 1px solid darken($base-border-color, 15%);
 }
 
+.boxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.box {
+  display: inline-block;
+  white-space: pre;
+  font-family: monospace;
+  line-height: normal;
+  // line-height: -moz-block-height;
+  cursor: pointer;
+  margin: 0 1em;
+}
+
 @media (max-width:1300px){
   .toc {
     column-count: 5;

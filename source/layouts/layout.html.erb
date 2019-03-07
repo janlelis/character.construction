@@ -11,7 +11,7 @@
 
     <script>
 function registerShake() {
-  document.querySelectorAll('.u,.n,.f,.c, .b, .b2').forEach(function(e){
+  document.querySelectorAll('.u,.n,.f,.c, .b, .b2, .box').forEach(function(e){
     var shakeInProgressTimeout = null
     e.addEventListener('click', function(){
       if(shakeInProgressTimeout){
@@ -81,6 +81,14 @@ document.addEventListener('DOMContentLoaded', registerScroll)
         }).on("success", function(e) {
           // console.log("copy: " + e.text)
         })
+
+        new ClipboardJS('.box', {
+          text: function(trigger) {
+            return trigger.textContent.trim()
+          }
+        }).on("success", function(e) {
+          // console.log("copy: " + e.text)
+        })
       })
 
     </script>
@@ -103,6 +111,7 @@ document.addEventListener('DOMContentLoaded', registerScroll)
           <li><a href="/blanks"><span>Blank Characters</span></a></li>
           <li><a href="/numbers"><span>Unicode Numbers</span></a></li>
           <li><a href="/az"><span>From A to Z</span></a></li>
+          <li><a href="/boxes"><span>Box Library</span></a></li>
         </ul>
         <h1 class="post-heading" id="top"><%= heading ? " #{heading}" : "" %></h1>
       </section>
