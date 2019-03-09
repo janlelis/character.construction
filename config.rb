@@ -118,6 +118,15 @@ helpers do
     }.join("</td></tr><tr><td>") + "</td></tr></table>"
   end
 
+  def hieroglyphs(codepoint_range)
+    '<div class="fc">' +
+    codepoint_range.map{ |cp|
+      e = [cp].pack("U")
+      unicode_name = (Unicode::SequenceName.of(e) || Unicode::Name.of(e) || "").sub(/\(emoji style\)/, '')
+      '<span class="h" title="' + unicode_name + '">' + e + '</span>'
+    }.join(" ") + "</div>"
+  end
+
   # def list_ignorables
   #   "# List of Ignorable Characters\n\n" +
   #   "Codepoint | Name | Character\n-|-|-\n" + UnicodeCharacteristics::IGNORABLE.map{ |codepoint|

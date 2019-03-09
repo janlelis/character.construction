@@ -35,7 +35,7 @@ function registerScroll() {
 }
 
 function registerShake() {
-  document.querySelectorAll('.u,.n,.f,.c, .b, .b2, .box').forEach(function(e){
+  document.querySelectorAll('.u,.n,.f,.c, .b, .b2, .box, .h').forEach(function(e){
     var shakeInProgressTimeout = null
     e.addEventListener('click', function(){
       if(shakeInProgressTimeout){
@@ -62,7 +62,7 @@ function registerLinkHeadings() {
 }
 
 function registerClipboard() {
-  new ClipboardJS('.c, .e, .f, .n', {
+  new ClipboardJS('.c, .e, .f, .n, .h', {
     text: function(trigger) {
       return trigger.textContent
     }
@@ -112,6 +112,7 @@ document.addEventListener('DOMContentLoaded', registerClipboard)
           <li><a href="/numbers"><span>Unicode Numbers</span></a></li>
           <li><a href="/az"><span>From A to Z</span></a></li>
           <li><a href="/boxes"><span>Box Library</span></a></li>
+          <li><a href="/ancient-egypt"><span>Ancient Egypt</span></a></li>
         </ul>
         <h1 class="post-heading" id="top"><%= heading ? " #{heading}" : "" %></h1>
       </section>

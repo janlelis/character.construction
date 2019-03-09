@@ -125,7 +125,13 @@ h2 {
   code {
     font-size: 16pt;
   }
+  &.no-spacing {
+    font-size: 22pt;
+    margin-bottom: 1.4em;
+    margin-top: 0.7em;
+  }
 }
+
 
 h3 {
   font-size: 16pt;
@@ -311,6 +317,13 @@ a {
   white-space: pre;
 }
 
+.h {
+  cursor: pointer;
+  font-size: 85px;
+  display: inline-block;
+  margin: 8px 38px;
+}
+
 .toc {
   column-count: 6;
   padding: 0.6em 1.8em;
@@ -425,6 +438,7 @@ a {
     display: inline-block;
     margin-left: 1em;
     margin-right: 1em;
+    margin-bottom: 0.4em;
   }
 }
 
