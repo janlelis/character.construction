@@ -127,6 +127,15 @@ helpers do
     }.join(" ") + "</div>"
   end
 
+  def all_picto
+    "# Pictographic, Non-Emoji\n\n" + FC + Unicode::Emoji::EXTENDED_PICTOGRAPHIC_NO_EMOJI.map{ |cp|
+      e = [cp].pack("U")
+      next if Unicode::Types.of(e).include?("Reserved")
+      unicode_name = (Unicode::SequenceName.of(e) || Unicode::Name.of(e) || "").sub(/\(emoji style\)/, '')
+      '<span class="f u" title="' + unicode_name + '">' + e + '</span>'
+    }.compact.join(" ") + FCEND
+  end
+
   # def list_ignorables
   #   "# List of Ignorable Characters\n\n" +
   #   "Codepoint | Name | Character\n-|-|-\n" + UnicodeCharacteristics::IGNORABLE.map{ |codepoint|
