@@ -62,7 +62,7 @@ GEM
     fancy_irb (1.1.0)
       paint (>= 0.9, < 3.0)
       unicode-display_width (~> 1.1)
-    ffi (1.9.18)
+    ffi (1.11.1)
     haml (4.0.7)
       tilt
     hike (1.2.3)
