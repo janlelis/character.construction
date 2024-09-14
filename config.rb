@@ -118,7 +118,7 @@ helpers do
     }.join("</td></tr><tr><td>") + "</td></tr></table>"
   end
 
-  def hieroglyphs(codepoint_range)
+  def hieroglyphs(*codepoint_range)
     '<div class="fc">' +
     codepoint_range.map{ |cp|
       e = [cp].pack("U")
