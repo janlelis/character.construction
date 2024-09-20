@@ -4,7 +4,6 @@ require "fileutils"
 require "erb"
 
 require "unicode/x"
-# require "characteristics/unicode"
 require "symbolify"
 require "az/kernel_method"
 

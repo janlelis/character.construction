@@ -385,8 +385,6 @@ a {
 
 .article-links {
   text-align: center;
-  // @include span-columns(4 of 10);
-  // @include shift(3 of 10);
   li {
     font-size: 1.3em;
   }
@@ -396,7 +394,6 @@ a {
   cursor: pointer;
   font-size: 32px;
   display: inline-block;
-  // border: 1px solid #ccc;
   // border: 1px solid #ccc;
   box-shadow: 0 0 1px 0 rgba(0,0,0,0.7);
   padding: 3px 12px;
@@ -445,7 +442,6 @@ a {
   cursor: pointer;
   font-size: 32px;
   display: inline-block;
-  // border: 1px solid #ccc;
   // border: 1px solid #ccc;
   // box-shadow: 0 0 1px 0 rgba(0,0,0,0.7);
   padding: 3px 12px;
