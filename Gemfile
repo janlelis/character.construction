@@ -1,21 +1,18 @@
 source 'https://rubygems.org'
 
-gem "middleman", "~>3.3.10"
-gem "middleman-gh-pages"
-gem "builder"
-gem "nokogiri"
-gem "bitters"
-gem "bourbon"
-gem "neat"
-gem "irbtools-more", require: "irbtools/binding"
-
+# Unicode gems
 gem "unicode-x", "~> 16.0"
 gem "characteristics"
 gem "symbolify"
+gem "az", "~> 2.1"
 
+# Included in unicode-x, in case one must be bumped
 # gem "unicode-emoji", "~> 3.4"
 # gem "unicode-name", "~> 1.12"
 # gem "unicode-sequence_name", "~> 1.13"
 # gem "unicode-numeric_value", "~> 1.10"
 # gem "unicode-types", "~> 1.9"
-gem "az", "~> 2.1"
+
+# Stdgems
+gem "erb"
+gem "fileutils"
