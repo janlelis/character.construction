@@ -1,0 +1,19 @@
+---
+import Layout from "../layouts/Layout.astro"
+
+import { UnicodeNumbersTable } from "../components/UnicodeNumbersTable"
+---
+
+<!-- TODO same -->
+<!-- TODO 5digit codepoints -->
+<!-- TODO server rendered table -->
+<!-- TODO prettify -->
+<!-- TODO sort by codepoint or numeric value -->
+<!-- TODO filter by number in input -->
+<!-- TODO grid: Disable sort on Unicode Char -->
+
+<Layout title="Unicode Numbers [character construction]">
+  <h1>Unicode Numbers</h1>
+
+  <UnicodeNumbersTable client:load />
+</Layout>

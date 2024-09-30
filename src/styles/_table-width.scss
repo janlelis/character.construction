@@ -1,3 +1,25 @@
 .table-20-X {
   th:nth-child(1) { width: 20%; }
 }
+
+.table-15-15-15-X {
+  th:nth-child(1) { width: 15%; }
+  th:nth-child(2) { width: 15%; }
+  th:nth-child(3) { width: 15%; }
+}
+
+.table-last-left {
+  tr {
+    th:last-child,
+    td:last-child {
+      text-align: left;
+    }
+  }
+}
+
+.table-all-left {
+  th,
+  td {
+    text-align: left;
+  }
+}

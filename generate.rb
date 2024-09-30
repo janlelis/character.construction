@@ -82,7 +82,7 @@ module UnicodePages
     end
 
     def list_blanks
-      "<table><tr><th>Name</th><th>Character</th><th>Codepoint</th></tr>" + UnicodeCharacteristics::BLANKS.map{ |codepoint|
+      "<table><thead><tr><th>Name</th><th>Character</th><th>Codepoint</th></tr></thead>" + UnicodeCharacteristics::BLANKS.map{ |codepoint|
         char = [codepoint].pack("U")
         unicode_name = Unicode::Name.readable(char)
       "<tr><td>#{ Unicode::Name.readable(char) }</td><td><span class=\"b\">]<span>#{ char }</span>[</span></td><td>#{format("U+%.4X", char.unpack("U")[0]).rjust(9)}</td></tr>"
@@ -90,7 +90,7 @@ module UnicodePages
     end
 
     def list_separators
-      "<table><tr><th>Name</th><th>Character</th><th>Codepoint</th></tr>" + UnicodeCharacteristics::SEPARATORS.map{ |codepoint|
+      "<table><thead><tr><th>Name</th><th>Character</th><th>Codepoint</th></tr></thead>" + UnicodeCharacteristics::SEPARATORS.map{ |codepoint|
         char = [codepoint].pack("U")
         unicode_name = Unicode::Name.readable(char)
       "<tr><td>#{ Unicode::Name.readable(char) }</td><td><span class=\"b\">]<span>#{ char }</span>[</span></td><td>#{format("U+%.4X", char.unpack("U")[0]).rjust(9)}</td></tr>"
@@ -200,15 +200,6 @@ module UnicodePages
 
     #   }.join("\n\n")
     # end
-
-    def list_numbers
-      "<table><tr><th>Unicode Character</th><th>Numerical Value</th><th>Name</th><th>Codepoint</th></tr>" + Unicode::NumericValue.chars.map{ |char|
-        codepoint = format("U+%.4X", char.unpack1("U"))
-        number = Unicode::NumericValue.of(char)
-        unicode_name = Unicode::Name.readable(char)
-        "<tr><td><span class=\"c\">#{ char }</span></td><td>#{number}</td><td>#{ Unicode::Name.readable(char) }</td><td>#{codepoint}</td></tr>"
-      }.join("\n\n") + "</table>"
-    end
 
     def binding_
       binding

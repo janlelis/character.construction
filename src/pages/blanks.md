@@ -15,7 +15,7 @@ title: Blank Characters [character construction]
 
 ### Whitespace / Other Invisible
 
-<table><tr><th>Name</th><th>Character</th><th>Codepoint</th></tr><tr><td>CHARACTER TABULATION</td><td><span class="b">]<span>	</span>[</span></td><td>   U+0009</td></tr>
+<table><thead><tr><th>Name</th><th>Character</th><th>Codepoint</th></tr></thead><tr><td>CHARACTER TABULATION</td><td><span class="b">]<span>	</span>[</span></td><td>   U+0009</td></tr>
 
 <tr><td>SPACE</td><td><span class="b">]<span> </span>[</span></td><td>   U+0020</td></tr>
 
@@ -139,7 +139,7 @@ title: Blank Characters [character construction]
 
 ### Line Breaks / Separators
 
-<table><tr><th>Name</th><th>Character</th><th>Codepoint</th></tr><tr><td>LINE FEED</td><td><span class="b">]<span>
+<table><thead><tr><th>Name</th><th>Character</th><th>Codepoint</th></tr></thead><tr><td>LINE FEED</td><td><span class="b">]<span>
 </span>[</span></td><td>   U+000A</td></tr>
 
 <tr><td>LINE TABULATION</td><td><span class="b">]<span></span>[</span></td><td>   U+000B</td></tr>

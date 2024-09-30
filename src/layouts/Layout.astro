@@ -1,15 +1,20 @@
 ---
 import Navigation from "../components/Navigation.astro"
-import type { MarkdownLayoutProps } from 'astro';
+// import type { MarkdownLayoutProps } from 'astro';
 
 import '../styles/all.scss';
 
-type Props = MarkdownLayoutProps<{
+type Frontmatter = {
   title: string;
-}>;
+}
+
+type Props = {
+  frontmatter?: Frontmatter;
+  title?: string;
+};
 
 const { frontmatter } = Astro.props;
-const { title } = frontmatter
+const title = frontmatter ? frontmatter.title : Astro.props.title
 ---
 <!doctype html>
 <html>
@@ -22,83 +27,7 @@ const { title } = frontmatter
     <meta name="keywords" content="unicode, codepoints, data, emoji"/>
 
     <script>
-import ClipboardJS from "clipboard"
-
-function scrollTo(href, cb) {
-  if(window) {
-    if(document.body.scrollIntoView) {
-      document.querySelector(href).scrollIntoView({
-        behavior: 'smooth'
-      })
-      if(cb){ setTimeout(cb, 200) }
-    } else {
-      window.location.href = href
-      if(cb){ cb() }
-    }
-  }
-}
-
-function registerScroll() {
-  document.querySelectorAll('a[href^="#"]').forEach(function(a){
-    a.addEventListener("click", function(event) {
-      event.preventDefault()
-      scrollTo(a.hash)
-    })
-  })
-}
-
-function registerShake() {
-  document.querySelectorAll('.u,.n,.f,.c, .b, .b2, .box, .h').forEach(function(e){
-    var shakeInProgressTimeout = null
-    e.addEventListener('click', function(){
-      if(shakeInProgressTimeout){
-        clearTimeout(shakeInProgressTimeout)
-        shakeInProgressTimeout = null
-        e.classList.remove('shake')
-      } else {
-        e.classList.add('shake')
-        shakeInProgressTimeout = setTimeout(function(){
-          e.classList.remove('shake')
-          shakeInProgressTimeout = null
-        }, 1400)
-      }
-    })
-  })
-}
-
-function registerLinkHeadings() {
-  ['h2', 'h3'].forEach(function(h){
-    document.querySelectorAll(h).forEach(function(e){
-      e.innerHTML = '<a href="#' + e.id + '">' + e.innerHTML + '</a>'
-    })
-  })
-}
-
-function registerClipboard() {
-  new ClipboardJS('.c, .e, .f, .n, .h', {
-    text: function(trigger) {
-      return trigger.textContent
-    }
-  }).on("success", function(e) {
-    // console.log("copy: " + e.text)
-  })
-
-  new ClipboardJS('.b, .b2', {
-    text: function(trigger) {
-      return trigger.children[0].textContent
-    }
-  }).on("success", function(e) {
-    // console.log("copy: " + e.text)
-  })
-
-  new ClipboardJS('.box', {
-    text: function(trigger) {
-      return trigger.textContent.trim()
-    }
-  }).on("success", function(e) {
-    // console.log("copy: " + e.text)
-  })
-}
+      import { registerShake, registerScroll, registerLinkHeadings, registerClipboard } from "../lib/support"
 
 document.addEventListener('DOMContentLoaded', registerShake)
 document.addEventListener('DOMContentLoaded', registerScroll)
