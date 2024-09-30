@@ -99,13 +99,13 @@ module UnicodePages
 
     def from_a_to_z
       fonts = Az.fonts - [:circled_negative, :circled_upper, :squared_negative, :squared_upper, :italic_bold, :sans_italic_bold, :fraktur_bold, :script_bold] # there are aliases for the same…
-      "<table><tr>" +
+      '<table class="table-light"><thead><tr>' +
       fonts.map{ |font|
         nice_font_name = font.to_s.gsub(/(^|_)([a-z])/) do ($1.empty? ? "" : " ") + $2.upcase end
         "<th class='mini' title='#{nice_font_name}'>" +
         nice_font_name.gsub(" ", "<br/>") +
         "</th>"
-      }.join("") + "</tr><tr><td>" + [*?A..?Z, *?a..?z].map { |letter|
+      }.join("") + "</tr></thead><tbody><tr><td>" + [*?A..?Z, *?a..?z].map { |letter|
         fonts.map{ |font|
           az_letter = az(letter, font)
           az_letter_name = Unicode::Name.readable(az_letter)
@@ -114,12 +114,12 @@ module UnicodePages
             az_letter +
             '</span>[</span>'
           else
-            '<span class="f" title="' + az_letter_name + '">' +
+            '<span class="g" title="' + az_letter_name + '">' +
             az_letter +
             '</span>'
           end
         }.join("</td><td>")
-      }.join("</td></tr><tr><td>") + "</td></tr></table>"
+      }.join("</td></tr><tr><td>") + "</td></tr></tbody></table>"
     end
 
     def all_picto

@@ -5,6 +5,10 @@ title: Box Library [character construction]
 
 # Box Library
 
+<div class="prelude">
+  click to copy to system clipboard
+</div>
+
 <div class="boxes">
   <div class="box" title="SIMPLE LIGHT">
 ┌───────┐

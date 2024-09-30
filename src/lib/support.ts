@@ -24,7 +24,7 @@ export function registerScroll() {
 }
 
 export function registerShake() {
-  document.querySelectorAll('.n,.f,.c, .b, .b2, .box, .h').forEach(function(e){
+  document.querySelectorAll('.n,.f,.g,.c, .b, .b2, .box, .h').forEach(function(e){
     var shakeInProgressTimeout = null
     e.addEventListener('click', function(){
       if(shakeInProgressTimeout){
@@ -51,7 +51,7 @@ export function registerLinkHeadings() {
 }
 
 export function registerClipboard() {
-  new ClipboardJS('.c, .e, .f, .n, .h', {
+  new ClipboardJS('.c, .e, .f, .g, .n, .h', {
     text: function(trigger) {
       return trigger.textContent
     }
