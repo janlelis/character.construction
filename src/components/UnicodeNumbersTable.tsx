@@ -10,10 +10,9 @@ import {
   useReactTable,
 } from '@tanstack/react-table'
 
-import UNICODE_DATA_NUMERIC_VALUE from "../../data/numeric_value.json";
 import { uPlus } from "../lib/support";
 import { unicodeName } from "../lib/unicode_name";
-import { unicodeNumericValue } from "../lib/unicode_number";
+import { unicodeNumberString, listUnicodeNumberCharacters } from "unicode-number"
 
 type UnicodeNumberEntry = {
   codepoint: number
@@ -22,12 +21,12 @@ type UnicodeNumberEntry = {
   name: string
 }
 
-const allNumbers: UnicodeNumberEntry[] = Object.keys(UNICODE_DATA_NUMERIC_VALUE).map((codepointAsString) => {
-    const codepoint = parseInt(codepointAsString, 10);
+const allNumbers: UnicodeNumberEntry[] = listUnicodeNumberCharacters().map((char) => {
+    const codepoint = char.codePointAt(0)
     return {
       codepoint: codepoint,
-      character: String.fromCharCode(codepoint),
-      numericValue: unicodeNumericValue(codepoint),
+      character: char,
+      numericValue: unicodeNumberString(char),
       name: unicodeName(codepoint),
     }
   })

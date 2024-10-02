@@ -3809,6 +3809,11 @@ ultrahtml@^1.5.3:
   resolved "https://registry.yarnpkg.com/ultrahtml/-/ultrahtml-1.5.3.tgz#e7a903a4b28a0e49b71b0801b444050bb0a369c7"
   integrity sha512-GykOvZwgDWZlTQMtp5jrD4BVL+gNn2NVlVafjcFUJ7taY20tqYdwdoWBFy6GBJsNTZe1GkGPkSl5knQAjtgceg==
 
+unicode-number@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/unicode-number/-/unicode-number-1.0.0.tgz#9e12eec0160a32cbc8771939baacad3da9a10269"
+  integrity sha512-HmbLrL4IYBpdoBU/nt8uCtRYzns2+apRbxON2/fEDZUH0Y/CSjdt7SD9L3aKO0p/aJtABTt9KcbtSPYT7+nhvA==
+
 unified@^11.0.0, unified@^11.0.4, unified@^11.0.5:
   version "11.0.5"
   resolved "https://registry.yarnpkg.com/unified/-/unified-11.0.5.tgz#f66677610a5c0a9ee90cab2b8d4d66037026d9e1"
