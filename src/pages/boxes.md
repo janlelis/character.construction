@@ -134,7 +134,7 @@ title: Box Library [character construction]
 ┌──╴ ╶──┐
 ╷       ╷
 
-╵ ╵
+╵       ╵
 └──╴ ╶──┘
 
 </div>
@@ -143,7 +143,7 @@ title: Box Library [character construction]
 ┏━━╸ ╺━━┓
 ╹       ╹
 
-╻ ╻
+╻       ╻
 ┗━━╸ ╺━━┛
 
 </div>
