@@ -75,6 +75,11 @@ p {
   margin: 0 0 $small-spacing;
 }
 
+::selection {
+  color: white;
+  background: $action-color;
+}
+
 a {
   color: $action-color;
   text-decoration: none;
@@ -648,4 +653,53 @@ a {
   40%, 60% {
     transform: rotate(12deg);
   }
+}
+
+.name-that-character {
+  text-align: center;
+  min-height: 60vh;
+
+  .input-char {
+    text-align: center;
+    font-size: 50px;
+    line-height: normal;
+    width: 4em;
+    appearance: none;
+    border: 1px solid #bdbdbd;
+    background: white;
+    padding: 0.5em 0em;
+    margin: 1.5rem auto;
+    &:focus {
+      border: 1px solid black;
+      outline: 2px solid black;
+    }
+  }
+
+  .char-name,
+  .placeholder {
+    font-size: 30px;
+    line-height: 30px;
+    margin: 1.5rem 0vw;
+  }
+  
+  .char-name {
+    color: $action-color;
+  }
+  
+  .placeholder {
+    color: #af7979;
+  }
+}
+
+.fade-fast-enter-active {
+  // nothing
+}
+
+.fade-fast-leave-active {
+  transition: opacity 0.2s ease;
+}
+
+.fade-fast-enter-from,
+.fade-fast-leave-to {
+  opacity: 0;
 }

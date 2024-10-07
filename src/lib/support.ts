@@ -51,7 +51,7 @@ export function registerLinkHeadings() {
 }
 
 export function registerClipboard() {
-  new ClipboardJS('.c, .e, .f, .g, .n, .h', {
+  new ClipboardJS('.c, .e, .f, .g, .n, .h, .copy', {
     text: function(trigger) {
       return trigger.textContent
     }

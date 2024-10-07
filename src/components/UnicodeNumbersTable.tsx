@@ -11,7 +11,7 @@ import {
 } from '@tanstack/react-table'
 
 import { uPlus } from "../lib/support";
-import { unicodeName } from "../lib/unicode_name";
+import { unicodeName } from "unicode-name";
 import { unicodeNumberString, listUnicodeNumberCharacters } from "unicode-number"
 
 type UnicodeNumberEntry = {
@@ -27,7 +27,7 @@ const allNumbers: UnicodeNumberEntry[] = listUnicodeNumberCharacters().map((char
       codepoint: codepoint,
       character: char,
       numericValue: unicodeNumberString(char),
-      name: unicodeName(codepoint),
+      name: unicodeName(char),
     }
   })
 
@@ -124,40 +124,3 @@ export function UnicodeNumbersTable() {
       </table>
   )
 }
-
-
-
-// import { Grid } from 'gridjs-react';
-
-// import { html } from "gridjs";
-// import { uPlus, registerShake } from "../lib/support";
-// import UNICODE_DATA_NUMERIC_VALUE from "../../data/numeric_value.json";
-// import { unicodeName } from "../lib/unicode_name";
-// import { unicodeNumber } from "../lib/unicode_number";
-
-// export default function UnicodeNumbersTable() {
-// return <Grid
-// columns={[
-//   {
-//     name: "Unicode Character",
-//     sort: false,
-//     formatter: (char) => html(`<span class="c">${char}</span>`),
-//   },
-//   "Codepoint",
-//   "Numerical Value",
-//   "Name",
-// ]}
-// data={Object.keys(UNICODE_DATA_NUMERIC_VALUE).map((codepointAsString) => {
-//   const codepoint = parseInt(codepointAsString, 10);
-//   return [
-//     String.fromCharCode(codepoint),
-//     uPlus(codepoint),
-//     unicodeNumber(codepoint),
-//     unicodeName(codepoint),
-//   ];
-// })}
-// search={true}
-// sort={true}
-
-// />
-// }

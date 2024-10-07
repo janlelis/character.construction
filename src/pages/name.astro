@@ -1,0 +1,11 @@
+---
+import Layout from "../layouts/Layout.astro"
+
+import NameThatCharacter from "../components/NameThatCharacter.vue"
+---
+
+<Layout title="Name That Character [character construction]">
+  <h1>Name That Character</h1>
+
+  <NameThatCharacter client:load />
+</Layout>
