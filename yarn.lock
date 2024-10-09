@@ -2168,7 +2168,7 @@ __metadata:
     react-dom: "npm:^18.3.1"
     sass-embedded: "npm:^1.79.2"
     typescript: "npm:^5.6.2"
-    unicode-name: "npm:^1.0.0"
+    unicode-name: "npm:^1.0.1"
     unicode-number: "npm:^1.0.0"
     vue: "npm:^3.5.10"
   languageName: unknown
@@ -5788,10 +5788,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"unicode-name@npm:^1.0.0":
-  version: 1.0.0
-  resolution: "unicode-name@npm:1.0.0"
-  checksum: 10c0/a8a120fe0ca6dfb8846547d9bece902642bf8847ea3d5fce19262b503fa144285a82b509faaf17633d9df620ab69f44abb28666a8b427cbe2439a2b473c176e4
+"unicode-name@npm:^1.0.1":
+  version: 1.0.1
+  resolution: "unicode-name@npm:1.0.1"
+  checksum: 10c0/d86a355a7ab5be1153afde5a530c4d1d3dcdbedd8908091678eef97bccb151fe977897a7f1684869971897d118ea9bd57d4454a034b5341485d30d31e661217c
   languageName: node
   linkType: hard
 
