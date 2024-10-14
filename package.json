@@ -18,13 +18,16 @@
     "@types/react-dom": "^18.3.0",
     "astro": "^4.15.7",
     "clipboard": "^2.0.11",
+    "echarts": "^5.5.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "sass-embedded": "^1.79.2",
     "typescript": "^5.6.2",
     "unicode-name": "^1.0.2",
     "unicode-number": "^1.0.0",
-    "vue": "^3.5.10"
+    "unicode-scripts": "^1.0.0",
+    "vue": "^3.5.10",
+    "vue-echarts": "^7.0.3"
   },
   "packageManager": "yarn@4.5.0"
 }

@@ -1,0 +1,162 @@
+---
+import Layout from "../layouts/Layout.astro"
+import CodepointsTreemap from "../components/CodepointsTreemap.vue"
+
+import { unicodeScript, unicodeScriptCode } from "unicode-scripts"
+import { UnicodeScriptsTable } from "../components/ScriptsTable"
+
+// Get codepoint script data
+const scriptCounts = {}
+const scriptExamples = {}
+const scriptCodes = {}
+
+for(let i = 0;i<1114112;i++) {
+  const scriptName = unicodeScript(i)
+  const scriptCode = unicodeScriptCode(i)
+  if(scriptCounts[scriptName]){
+    scriptCounts[scriptName]++
+  } else {
+    scriptCounts[scriptName] = 1
+    scriptExamples[scriptName] = String.fromCodePoint(i)
+    scriptCodes[scriptName] = scriptCode
+  }
+}
+
+// Retrieve most common scripts
+const scriptsWithMostCodepoints = Object.entries(scriptCounts)
+.sort(([_1,value1], [_2, value2]) => (value2 - value1) )
+.filter(([key, value]) => value > 1000)
+.map(([key,value]) => key)
+// .slice(0,11)
+
+const scriptCountsLarge = {...scriptCounts}
+
+scriptCountsLarge.Other = 0
+for (const scriptName of Object.keys(scriptCounts)) {
+  if(!scriptsWithMostCodepoints.includes(scriptName)) {
+    scriptCountsLarge.Other += scriptCountsLarge[scriptName]
+    delete scriptCountsLarge[scriptName]
+  }
+}
+
+// Diagram should not contain "Unknown"
+delete scriptCountsLarge.Unknown
+
+// Make diagram data
+const scriptsLarge = Object.entries(scriptCountsLarge).map(([name, value]) => {
+  return {
+    name,
+    value,
+    // link: name === "Other" ? "" : `https://www.wikipedia.org/wiki/${name}_(script)`,
+  }
+}).sort((a,b) => {
+  return a.value - b.value
+})
+
+// Build wikipedia links
+const SCRIPT_URLS = {
+  Unknown: "https://en.wikipedia.org/wiki/Script_(Unicode)#Special_script_property_values",
+  Inherited: "https://en.wikipedia.org/wiki/Script_(Unicode)#Special_script_property_values",
+  Common: "https://en.wikipedia.org/wiki/Script_(Unicode)#Special_script_property_values",
+  Old_Hungarian: "https://en.wikipedia.org/wiki/Old_Hungarian_script",
+  Cypro_Minoan: "https://en.wikipedia.org/wiki/Cypro-Minoan_syllabary",
+  Newa: "https://en.wikipedia.org/wiki/Pracalit_script",
+  Soyombo: "https://en.wikipedia.org/wiki/Soyombo_script",
+  Tangsa: "https://en.wikipedia.org/wiki/Tangsa_language",
+  Siddham: "https://en.wikipedia.org/wiki/Siddham_script",
+  Adlam: "https://en.wikipedia.org/wiki/Adlam_script",
+  Masaram_Gondi: "https://en.wikipedia.org/wiki/Gondi_writing",
+  Tulu_Tigalari: "https://en.wikipedia.org/wiki/Tigalari_script",
+  Ahom: "https://en.wikipedia.org/wiki/Ahom_script",
+  Marchen: "https://en.wikipedia.org/wiki/Marchen_script",
+  Osage: "https://en.wikipedia.org/wiki/Osage_script",
+  Vithkuqi: "https://en.wikipedia.org/wiki/Vithkuqi_alphabet",
+  Garay: "https://en.wikipedia.org/wiki/Garay_alphabet",
+  Todhri: "https://en.wikipedia.org/wiki/Todhri_alphabet",
+  Hanifi_Rohingya: "https://en.wikipedia.org/wiki/Hanifi_Rohingya_script",
+  Dogri: "https://en.wikipedia.org/wiki/Dogri_script",
+  Pau_Cin_Hau: "https://en.wikipedia.org/wiki/Pau_Cin_Hau_script",
+  Sunuwar: "https://en.wikipedia.org/wiki/Sunuwar_alphabet",
+  Wancho: "https://en.wikipedia.org/wiki/Wancho_script",
+  Elbasan: "https://en.wikipedia.org/wiki/Elbasan_alphabet",
+  Sogdian: "https://en.wikipedia.org/wiki/Sogdian_alphabet",
+  Multani: "https://en.wikipedia.org/wiki/Multani_script",
+  Palmyrene: "https://en.wikipedia.org/wiki/Palmyrene_alphabet",
+  Old_Uyghur: "https://en.wikipedia.org/wiki/Old_Uyghur_alphabet",
+  Makasar: "https://en.wikipedia.org/wiki/Makasar_script",
+  Hatran: "https://en.wikipedia.org/wiki/Hatran_Aramaic#Alphabet",
+};
+
+[
+  "Anatolian_Hieroglyphs",
+  "Khitan_Small_Script",
+  "Nushu",
+  "Gurung_Khema",
+  "Newa",
+  "Bhaiksuki",
+  "Tirhuta",
+  "Medefaidrin",
+  "Dives_Akuru",
+  "Warang_Citi",
+  "Zanabazar_Square",
+  "Nandinagari",
+  "Nyiakeng_Puachue_Hmong",
+  "Gunjala_Gondi",
+  "Kirat_Rai",
+  "Nag_Mundari",
+  "Ol_Onal",
+  "Elymaic",
+  "Psalter_Pahlavi",
+].forEach((name) => {
+  SCRIPT_URLS[name] = `https://www.wikipedia.org/wiki/${name}`
+});
+
+
+// Make table data
+const scriptsAll = Object.entries(scriptCounts).map(([name, value]) => {
+
+  return {
+    name,
+    code: scriptCodes[name],
+    size: value,
+    url: SCRIPT_URLS[name] || `https://www.wikipedia.org/wiki/${name}_(script)`,
+    exampleCharacter: scriptExamples[name],
+  }
+}).sort((a,b) => {
+  return a.value - b.value
+})
+
+
+---
+
+<Layout title="Unicode Scripts [character construction]">
+  
+  <h1>Unicode Scripts</h1>
+
+  <UnicodeScriptsTable data={scriptsAll} client:load />
+  <div class="outro">
+    Available as a software library in <a href="https://github.com/janlelis/unicode-scripts.js">JavaScript</a> and <a href="https://github.com/janlelis/unicode-scripts">Ruby</a>
+  </div>
+
+  <h2 id="distribution">Script Assignment Distribution</h2>
+
+  <div class="chart-container">
+    <CodepointsTreemap client:only="vue" data={scriptsLarge} />
+  </div>
+  
+</Layout>
+
+<style lang="scss">
+h2 {
+  margin-bottom: 1em;
+}
+
+.chart-container {
+  height: 70vh;
+  overflow: hidden;
+  width: 100%;
+  margin: auto;
+  margin-bottom: 3em;
+  background: #8f8f8f;
+}
+</style>
