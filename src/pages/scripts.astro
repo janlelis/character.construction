@@ -2,7 +2,7 @@
 import Layout from "../layouts/Layout.astro"
 import CodepointsTreemap from "../components/CodepointsTreemap.vue"
 
-import { unicodeScript, unicodeScriptCode } from "unicode-scripts"
+import { unicodeScript, unicodeScriptCode } from "unicode-script"
 import { UnicodeScriptsTable } from "../components/ScriptsTable"
 
 // Get codepoint script data
@@ -135,7 +135,7 @@ const scriptsAll = Object.entries(scriptCounts).map(([name, value]) => {
 
   <UnicodeScriptsTable data={scriptsAll} client:load />
   <div class="outro">
-    Available as a software library in <a href="https://github.com/janlelis/unicode-scripts.js">JavaScript</a> and <a href="https://github.com/janlelis/unicode-scripts">Ruby</a>
+    Available as a software library in <a href="https://github.com/janlelis/unicode-script.js">JavaScript</a> and <a href="https://github.com/janlelis/unicode-scripts">Ruby</a>
   </div>
 
   <h2 id="distribution">Script Assignment Distribution</h2>

@@ -2147,9 +2147,10 @@ __metadata:
     react-dom: "npm:^18.3.1"
     sass-embedded: "npm:^1.79.2"
     typescript: "npm:^5.6.2"
+    unicode-block: "npm:^1.0.1"
     unicode-name: "npm:^1.0.2"
     unicode-number: "npm:^1.0.0"
-    unicode-scripts: "npm:^1.0.0"
+    unicode-script: "npm:^1.0.2"
     vue: "npm:^3.5.10"
     vue-echarts: "npm:^7.0.3"
   languageName: unknown
@@ -5758,6 +5759,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"unicode-block@npm:^1.0.1":
+  version: 1.0.1
+  resolution: "unicode-block@npm:1.0.1"
+  checksum: 10c0/3ed5239f7a03ba799fc2d996bd8a967e6ac572136c65cd0514f3ac4cfb78079b55f8dcdc117653a5b83aa386a6e158df00c9cfdc468e58ebea8ddfe69bfee314
+  languageName: node
+  linkType: hard
+
 "unicode-name@npm:^1.0.2":
   version: 1.0.2
   resolution: "unicode-name@npm:1.0.2"
@@ -5772,10 +5780,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"unicode-scripts@npm:^1.0.0":
-  version: 1.0.0
-  resolution: "unicode-scripts@npm:1.0.0"
-  checksum: 10c0/6d50c8bbf0f27dfc50ca65fdb2b2f7744665acca47718c856b093c89f97bbe0f0fb9569a9a65d6c73096d084001210102450b64f0122cb8cb5934d105232bf2a
+"unicode-script@npm:^1.0.2":
+  version: 1.0.2
+  resolution: "unicode-script@npm:1.0.2"
+  checksum: 10c0/d7c7b694cff9fd309af2e37d5c5e8ddab6fd36c0aac0e2c40e1c675cf721a04284de8297e47ce42bcd16f9ca9436a78a9e9eb3a6effb4900eae8b8ca00cdb352
   languageName: node
   linkType: hard
 
