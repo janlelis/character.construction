@@ -109,8 +109,6 @@ title: Blank Characters [character construction]
 
 <tr><td>HALFWIDTH HANGUL FILLER</td><td><span class="b">]<span>ﾠ</span>[</span></td><td>   U+FFA0</td></tr>
 
-<tr><td>KAITHI VOWEL SIGN I</td><td><span class="b">]<span>𑂱</span>[</span></td><td>  U+110B1</td></tr>
-
 <tr><td>SHORTHAND FORMAT LETTER OVERLAP</td><td><span class="b">]<span>𛲠</span>[</span></td><td>  U+1BCA0</td></tr>
 
 <tr><td>SHORTHAND FORMAT CONTINUING OVERLAP</td><td><span class="b">]<span>𛲡</span>[</span></td><td>  U+1BCA1</td></tr>

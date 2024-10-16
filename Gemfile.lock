@@ -6,7 +6,7 @@ GEM
       paint (>= 0.9, < 3.0)
       rationalist (~> 2.0)
     cgi (0.4.1)
-    characteristics (1.7.0)
+    characteristics (1.7.1)
       unicode-categories (~> 1.10)
     clipboard (2.0.0)
     erb (4.0.4)

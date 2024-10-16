@@ -2148,6 +2148,7 @@ __metadata:
     sass-embedded: "npm:^1.79.2"
     typescript: "npm:^5.6.2"
     unicode-block: "npm:^1.0.1"
+    unicode-category: "npm:^1.0.0"
     unicode-name: "npm:^1.0.2"
     unicode-number: "npm:^1.0.0"
     unicode-script: "npm:^1.0.2"
@@ -5763,6 +5764,13 @@ __metadata:
   version: 1.0.1
   resolution: "unicode-block@npm:1.0.1"
   checksum: 10c0/3ed5239f7a03ba799fc2d996bd8a967e6ac572136c65cd0514f3ac4cfb78079b55f8dcdc117653a5b83aa386a6e158df00c9cfdc468e58ebea8ddfe69bfee314
+  languageName: node
+  linkType: hard
+
+"unicode-category@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "unicode-category@npm:1.0.0"
+  checksum: 10c0/5653a746dfb3e6df4b852f5b0c74f9947ac19d9dec7abf858201307db62aa1f32298aac118805b2970728ed01de55487a0e32164d3ccbf8da7937ceeb1470638
   languageName: node
   linkType: hard
 
