@@ -11,13 +11,13 @@ import { ControlsTable } from "../components/ControlsTable"
     List of C1 Control Codepoints
   </div> -->
 
-  <h2>C0 | List of Codepoints from U+0000 (0) to U+001F (31)</h2>
+  <h2 id="c0">C0 | List of Codepoints from U+0000 (0) to U+001F (31)</h2>
   <ControlsTable client:load codepoints={Array.from({length: 32}, (_, i) => i)} />
     
-  <h2>DEL |Single Codepoint U+007F (127)</h2>
+  <h2 id="del">DEL |Single Codepoint U+007F (127)</h2>
   <ControlsTable client:load codepoints={[127]} />
 
-  <h2>C1 | List of Codepoints from U+0080 (128) to U+009F (159)</h2>
+  <h2 id="c1">C1 | List of Codepoints from U+0080 (128) to U+009F (159)</h2>
   <ControlsTable client:load codepoints={Array.from({length: 32}, (_, i) => i + 128)} />
 
 </Layout>
