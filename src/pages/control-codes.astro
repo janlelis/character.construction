@@ -12,16 +12,19 @@ import { ControlsTable } from "../components/ControlsTable"
   </div> -->
 
   <h2 id="c0">C0 | List of Codepoints from U+0000 (0) to U+001F (31)</h2>
-  <ControlsTable client:load codepoints={Array.from({length: 32}, (_, i) => i)} />
+  <ControlsTable client:load codepoints={Array.from({length: 32}, (_, i) => i)} caret={true} />
     
   <h2 id="del">DEL |Single Codepoint U+007F (127)</h2>
-  <ControlsTable client:load codepoints={[127]} />
+  <ControlsTable client:load codepoints={[127]} caret={true} />
 
   <h2 id="c1">C1 | List of Codepoints from U+0080 (128) to U+009F (159)</h2>
-  <ControlsTable client:load codepoints={Array.from({length: 32}, (_, i) => i + 128)} />
+  <ControlsTable client:load codepoints={Array.from({length: 32}, (_, i) => i + 128)} caret={false} />
 
+    <div class="outro">
+      Also see <a href="/ascii">ASCII table</a>
+    </div>
 </Layout>
 
 <style>
-h2 {margin-bottom: 1em;}
+h2 {margin-bottom: 1em; text-align: left}
 </style>

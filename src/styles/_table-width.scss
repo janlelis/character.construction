@@ -17,6 +17,10 @@
   }
 }
 
+.table-last-large {
+  th:last-child { width: 25%; }
+}
+
 .table-all-left {
   th,
   td {

@@ -1,0 +1,23 @@
+---
+import Layout from "../layouts/Layout.astro"
+
+import { AsciiTable } from "../components/AsciiTable"
+---
+
+<Layout title="ASCII Characters [character construction]">
+  <h1>Hello Again 🙃</h1>
+
+  <!-- <div class="prelude">
+    …
+  </div> -->
+
+  <AsciiTable client:load />
+  <div class="outro">
+    Also see <a href="/control-codes">Control Characters</a>
+  </div>
+
+</Layout>
+
+<style>
+h2 {margin-bottom: 1em;}
+</style>

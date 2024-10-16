@@ -11,51 +11,38 @@ import {
 } from '@tanstack/react-table'
 
 import { uPlus } from "../lib/support";
-import { unicodeName, unicodeAliases } from "unicode-name";
+import { unicodeName } from "unicode-name";
 
-type UnicodeControlEntry = {
+type AsciiRow = {
   codepoint: number
   character: string
-  abbreviation: Array<string>
   name: Array<string>
 }
 
-const codepointToEntry = (codepoint) : UnicodeControlEntry => {
+const codepointToEntry = (codepoint) : AsciiRow => {
   const character = String.fromCodePoint(codepoint)
-      const aliases = unicodeAliases(character)
-      const abbreviation = aliases.abbreviation
-      const name = [...(aliases.control || [] ), ...(aliases.figment || [] )]
+  const name = unicodeName(character)
       return {
         codepoint,
         character,
-        abbreviation,
         name,
       }
 }
 
-const getControlSymbol = (codepoint) => {
-  return <div className="symbol">{codepoint === 127 ? "␡" : codepoint < 127 ? String.fromCodePoint(9216 + codepoint) : ""}</div>
-}
 
-const columnHelper = createColumnHelper<UnicodeControlEntry>()
+const columnHelper = createColumnHelper<AsciiRow>()
 
-const columns = ({caret}) => ([
+const columns = [
   columnHelper.accessor('codepoint', {
     cell: info => <span className="u">{uPlus(info.getValue())}</span>,
     header: "Codepoint",
     sortingFn: "basic",
     sortDescFirst: false
   }),
-  columnHelper.accessor('abbreviation', {
-    cell: info => [getControlSymbol(info.row.original.codepoint), ...info.getValue()].map((name) => <div key={name}>{name}</div>),
-    header: "Symbol",
-    sortingFn: "basic",
-    sortDescFirst: false
-  }),
-  columnHelper.display({
-    cell: props => <span className="nv">^{String.fromCodePoint(props.row.original.codepoint === 127 ? 63 : props.row.original.codepoint + 64)}</span>,
-    id: "caret",
-    header: "Caret",
+  columnHelper.accessor('character', {
+    cell: info => <span className="c">{info.getValue()}</span>,
+    header: "Character",
+    enableSorting: false,
   }),
   columnHelper.display({
     cell: props => <span className="nv">{props.row.original.codepoint}</span>,
@@ -72,23 +59,16 @@ const columns = ({caret}) => ([
     id: "binary",
     header: "Binary",
   }),
-  columnHelper.accessor('character', {
-    cell: info => <span className="c">{info.getValue()}</span>,
-    header: "Character",
-    enableSorting: false,
-  }),
   columnHelper.accessor('name', {
-    cell: info => (info.getValue() || []).map((name) => <div key={name}>{name}</div>),
     header: "Name",
     sortingFn: "basic",
     sortDescFirst: false
   }),
-].filter((column) => {
-  return caret || column.id !== "caret"
-}))
+]
 
-export function ControlsTable({codepoints, caret}) {
-  const [data, setData] = React.useState<UnicodeControlEntry[]>((codepoints || []).map((cp) => codepointToEntry(cp)))
+export function AsciiTable() {
+  const codepoints = Array.from({length: 95}, (_, i) => i + 32)
+  const [data, _setData] = React.useState<AsciiRow[]>((codepoints || []).map((cp) => codepointToEntry(cp)))
   const [sorting, setSorting] = React.useState<SortingState>([
     {
       id: 'codepoint',
@@ -96,15 +76,9 @@ export function ControlsTable({codepoints, caret}) {
     },
   ])
 
-  React.useEffect(()=> {
-    setData((codepoints || []).map((cp) => {
-      return codepointToEntry(cp)
-    }))
-  }, [codepoints])
-
   const table = useReactTable({
     data,
-    columns: columns({caret}),
+    columns,
     getCoreRowModel: getCoreRowModel(),
     getSortedRowModel: getSortedRowModel(), //client-side sorting
     onSortingChange: setSorting,
@@ -115,7 +89,7 @@ export function ControlsTable({codepoints, caret}) {
   })
 
   return (
-      <table className="table-last-large">
+      <table className="table">
         <thead>
           {table.getHeaderGroups().map(headerGroup => (
             <tr key={headerGroup.id}>
