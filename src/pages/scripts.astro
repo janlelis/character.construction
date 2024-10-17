@@ -58,6 +58,7 @@ const SCRIPT_URLS = {
   Unknown: "https://en.wikipedia.org/wiki/Script_(Unicode)#Special_script_property_values",
   Inherited: "https://en.wikipedia.org/wiki/Script_(Unicode)#Special_script_property_values",
   Common: "https://en.wikipedia.org/wiki/Script_(Unicode)#Special_script_property_values",
+  Tangut: "https://en.wikipedia.org/wiki/Tangut_script",
   Old_Hungarian: "https://en.wikipedia.org/wiki/Old_Hungarian_script",
   Cypro_Minoan: "https://en.wikipedia.org/wiki/Cypro-Minoan_syllabary",
   Newa: "https://en.wikipedia.org/wiki/Pracalit_script",
@@ -132,23 +133,27 @@ const scriptsAll = Object.entries(scriptCounts).map(([name, value]) => {
 <Layout title="Unicode Scripts [character construction]">
   
   <h1>Unicode Scripts</h1>
+  
+    <h2 id="distribution">Codepoint Script Distribution</h2>
+  
+    <div class="chart-container">
+      <CodepointsTreemap client:only="vue" data={scriptsLarge} />
+    </div>
 
+    <h2 id="list">List of Scripts</h2>
   <UnicodeScriptsTable data={scriptsAll} client:load />
+
   <div class="outro">
     Available as a software library in <a href="https://github.com/janlelis/unicode-script.js">JavaScript</a> and <a href="https://github.com/janlelis/unicode-scripts">Ruby</a>
-  </div>
-
-  <h2 id="distribution">Script Assignment Distribution</h2>
-
-  <div class="chart-container">
-    <CodepointsTreemap client:only="vue" data={scriptsLarge} />
   </div>
   
 </Layout>
 
 <style lang="scss">
 h2 {
-  margin-bottom: 1em;
+  margin-top: -0.5em;
+  margin-bottom: 0.5em;
+  text-align: left;
 }
 
 .chart-container {
