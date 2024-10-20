@@ -55,8 +55,9 @@ module UnicodePages
     end
 
     def emoji_text_name
-      "Text, +VS15 | Default, no VS | Emoji, +VS16 | Name | Base Codepoint/s\n-|-|-|-|-\n" +
+      "Text, +VS15 | Default, no VS | Emoji, +VS16 | Default Should Be | Name | Base Codepoint\n-|-|-|-|-|-\n" +
       Unicode::Emoji::LIST.values.map(&:values).flatten.map{ |e|
+        next unless e == e[Unicode::Emoji::REGEX_BASIC] || e == e[Unicode::Emoji::REGEX_TEXT]
         e.gsub! /\u{FE0E}|\u{FE0F}/, ""
         unicode_name = (Unicode::SequenceName.of(e) || Unicode::Name.of(e) || "").sub(/\(emoji style\)/, '')
         codepoints = e.unpack("U*").map{ |cp| "U+%4X" % cp }.join("<br/>")
@@ -67,9 +68,10 @@ module UnicodePages
         }</span> | <span class=\"n\">#{
           e + [Unicode::Emoji::EMOJI_VARIATION_SELECTOR].pack("U*")
         }</span> | " +
+        "#{ e == e[Unicode::Emoji::REGEX_BASIC] ? "Emoji" : "Text" } | " +
         "#{ unicode_name } | " +
         "#{ codepoints }"
-      }.join("\n")
+      }.compact.join("\n")
     end
 
     def hieroglyphs(*codepoint_range)
