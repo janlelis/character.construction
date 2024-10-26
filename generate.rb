@@ -55,12 +55,14 @@ module UnicodePages
     end
 
     def emoji_text_name
-      "Text, +VS15 | Default, no VS | Emoji, +VS16 | Default Should Be | Name | Base Codepoint\n-|-|-|-|-|-\n" +
+      "Base Codepoint | Name | Text, +VS15 | Default, no VS | Emoji, +VS16 | Default Should Be\n-|-|-|-|-|-\n" +
       Unicode::Emoji::LIST.values.map(&:values).flatten.map{ |e|
         next unless e == e[Unicode::Emoji::REGEX_BASIC] || e == e[Unicode::Emoji::REGEX_TEXT]
         e.gsub! /\u{FE0E}|\u{FE0F}/, ""
         unicode_name = (Unicode::SequenceName.of(e) || Unicode::Name.of(e) || "").sub(/\(emoji style\)/, '')
         codepoints = e.unpack("U*").map{ |cp| "U+%4X" % cp }.join("<br/>")
+        "<span class=\"u\">#{ codepoints }</span> | " +
+        "#{ unicode_name } | " +
         "<span class=\"n\">#{
           e + [Unicode::Emoji::TEXT_VARIATION_SELECTOR].pack("U*")
         }</span> | <span class=\"n\">#{
@@ -68,10 +70,18 @@ module UnicodePages
         }</span> | <span class=\"n\">#{
           e + [Unicode::Emoji::EMOJI_VARIATION_SELECTOR].pack("U*")
         }</span> | " +
-        "#{ e == e[Unicode::Emoji::REGEX_BASIC] ? "Emoji" : "Text" } | " +
-        "#{ unicode_name } | " +
-        "#{ codepoints }"
+        "#{ e == e[Unicode::Emoji::REGEX_BASIC] ? "Emoji" : "Text" }"
       }.compact.join("\n")
+    end
+
+    def qualify_emoji
+      "Fully-Qualified (FQE) | Emoji Name | Non-FQE | Codepoints | Type \n-|-|-|-|-\n" + 
+      Unicode::SequenceName::INDEX[:EMOJI_NOT_QUALIFIED].map { |uqemqe, fqe|
+        codepoints = uqemqe.unpack("U*").map{ |cp| "U+%4X" % cp }.join("<br/>")
+        "<span class=\"n\">#{fqe}</span> | #{Unicode::SequenceName.of(fqe)} | <span class=\"n\">#{uqemqe}</span> | #{codepoints} | <span class=\"u\">#{
+          uqemqe == uqemqe[Unicode::Emoji::REGEX_INCLUDE_MQE] ? 'Minimally-Qualified (MQE)' : 'Unqualified (UQE)'
+         }</span>"
+      }.join("\n")
     end
 
     def hieroglyphs(*codepoint_range)
@@ -142,64 +152,6 @@ module UnicodePages
     #     Unicode::Name.readable(char)
     #     format("U+%.4X", char.unpack("U")[0]).rjust(9) +
     #     " | #{ unicode_name } | <span class=\"b\">]<span>#{ char }</span>[</span>"
-    #   }.join("\n\n")
-    # end
-
-    # def list_tags
-    #   "# List of Tags\n\n" +
-    #   "Codepoint | Name | Character\n-|-|-\n" + UnicodeCharacteristics::TAGS.map{ |codepoint|
-    #     char = [codepoint].pack("U")
-    #     unicode_name = Unicode::Name.readable(char)
-    #     format("U+%.4X", char.unpack("U")[0]).rjust(9) +
-    #     " | #{ unicode_name } | <span class=\"b\">]<span>#{ char }</span>[</span>"
-    #   }.join("\n\n")
-    # end
-
-    # def list_controls
-    #   "# Pre-Unicode Control Characters\n\n" +
-    #   "<table><tr><th>Codepoint</th><th>Name</th><th>Symbol</th><th>Character</th></tr>" + [*0...0x20, *0x80...0xA0] .map{ |codepoint|
-    #     char = [codepoint].pack("U")
-    #     unicode_name = Unicode::Name.readable(char)
-    #     "<tr><td>#{format("U+%.4X", char.unpack("U")[0]).rjust(9)}</td><td>#{ Unicode::Name.readable(char) }</td><td><span class=\"n\">#{Symbolify.symbolify(char)}</span></td><td><span class=\"b\">]<span>#{ char }</span>[</span></td></tr>"
-    #   }.join("\n\n") + "</table>"
-    # end
-
-    # def list_numbers
-    #   Unicode::NumericValue.chars.group_by{ |char|
-    #     Unicode::Name.of(char)[/^\w+( digit| fraction)?/i]
-    #   }.map{ |group, chars|
-    #     group_name = group.gsub(/(?= |^)(.)/){ $1.upcase }
-
-    #     table_data_untransposed = chars.sort_by{ |char|
-    #       Unicode::NumericValue.of(char)
-    #     }.group_by{ |char|
-    #       Unicode::NumericValue.of(char)
-    #     }.to_a
-
-    #     table_data_untransposed.each_slice(10).map{ |slice|
-    #       table_data = slice.transpose
-    #       length = table_data[0].length
-
-    #       prepared = length.times.map{ |char_index|
-    #         line = table_data[1][char_index]
-    #         # line[length] = nil
-    #         line.map{ |char|
-    #           unicode_name = Unicode::Name.readable(char) if char
-
-    #           char ?
-    #           "<span class=\"c\" title=\"#{unicode_name}\">#{char}</span>" :
-    #           "-"
-    #         }
-    #       }
-
-    #       "## #{ group_name }\n\n" +
-    #       table_data[0].join(" | ") + "\n" +
-    #       table_data[0].map{ "-" }.join(" | ") + "\n" +
-    #       prepared.transpose.reject{|l|
-    #         l.compact.empty?
-    #       }.map{|l| l.join(" | ")}.join("\n")
-    #     }.join("\n\n")
-
     #   }.join("\n\n")
     # end
 
