@@ -97,7 +97,7 @@ module UnicodePages
       "<table><thead><tr><th>Name</th><th>Character</th><th>Codepoint</th></tr></thead>" + UnicodeCharacteristics::BLANKS.map{ |codepoint|
         char = [codepoint].pack("U")
         unicode_name = Unicode::Name.readable(char)
-      "<tr><td>#{ Unicode::Name.readable(char) }</td><td><span class=\"b\">]<span>#{ char }</span>[</span></td><td>#{format("U+%.4X", char.unpack("U")[0]).rjust(9)}</td></tr>"
+      "<tr><td>#{ Unicode::Name.readable(char) }</td><td><span class=\"b\"><span>#{ char }</span></span></td><td>#{format("U+%.4X", char.unpack("U")[0]).rjust(9)}</td></tr>"
       }.join("\n\n") + "</table>"
     end
 
@@ -105,7 +105,7 @@ module UnicodePages
       "<table><thead><tr><th>Name</th><th>Character</th><th>Codepoint</th></tr></thead>" + UnicodeCharacteristics::SEPARATORS.map{ |codepoint|
         char = [codepoint].pack("U")
         unicode_name = Unicode::Name.readable(char)
-      "<tr><td>#{ Unicode::Name.readable(char) }</td><td><span class=\"b\">]<span>#{ char }</span>[</span></td><td>#{format("U+%.4X", char.unpack("U")[0]).rjust(9)}</td></tr>"
+      "<tr><td>#{ Unicode::Name.readable(char) }</td><td><span class=\"b\"><span>#{ char }</span></span></td><td>#{format("U+%.4X", char.unpack("U")[0]).rjust(9)}</td></tr>"
       }.join("\n\n") + "</table>"
     end
 
@@ -122,9 +122,9 @@ module UnicodePages
           az_letter = az(letter, font)
           az_letter_name = Unicode::Name.readable(az_letter)
           if font == :tag
-            '<span class="b2" title="' + az_letter_name + '">]<span>' +
+            '<span class="b" title="' + az_letter_name + '"><span>' +
             az_letter +
-            '</span>[</span>'
+            '</span></span>'
           else
             '<span class="g" title="' + az_letter_name + '">' +
             az_letter +
