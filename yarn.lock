@@ -2149,7 +2149,7 @@ __metadata:
     typescript: "npm:^5.6.2"
     unicode-block: "npm:^1.0.1"
     unicode-category: "npm:^1.0.0"
-    unicode-name: "npm:^1.0.2"
+    unicode-name: "npm:^1.0.4"
     unicode-number: "npm:^1.0.0"
     unicode-script: "npm:^1.0.2"
     vue: "npm:^3.5.10"
@@ -5774,10 +5774,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"unicode-name@npm:^1.0.2":
-  version: 1.0.2
-  resolution: "unicode-name@npm:1.0.2"
-  checksum: 10c0/ea007c57bd138bc8c87e1cf3b259b201759bfafa945675262c3cc3cfd8183d8c019982d0e71dfbd71beb8b8976f08f0dd6008609fa2530b3ebeb896c4acaaae3
+"unicode-name@npm:^1.0.4":
+  version: 1.0.4
+  resolution: "unicode-name@npm:1.0.4"
+  checksum: 10c0/fcb697b3da66fc9d789f4d89daaeecdae2d708726b304fefade463e69df5381447da8ef1ab61ac0f86046a2a3033a64c576a8c1a3fbd0279b2f7b6fd7d02ec01
   languageName: node
   linkType: hard
 
