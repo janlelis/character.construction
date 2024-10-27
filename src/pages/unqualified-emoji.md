@@ -5,6 +5,10 @@ title: UQE and MQE Emoji [character construction]
 
 # Unqualified and Minimally-Qualified Emoji Sequences
 
+<div class="prelude">
+  List of Emoji that lack one or multiple VS16 (Emoji Presentation Selector) codepoints
+</div>
+
 Fully-Qualified (FQE) | Emoji Name | Non-FQE | Codepoints | Type 
 -|-|-|-|-
 <span class="n">👨‍❤️‍👨</span> | COUPLE WITH HEART: MAN, MAN | <span class="n">👨‍❤‍👨</span> | U+1F468<br/>U+200D<br/>U+2764<br/>U+200D<br/>U+1F468 | <span class="u">Minimally-Qualified (MQE)</span>
