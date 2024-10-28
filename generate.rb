@@ -79,7 +79,7 @@ module UnicodePages
       Unicode::SequenceName::INDEX[:EMOJI_NOT_QUALIFIED].map { |uqemqe, fqe|
         codepoints = uqemqe.unpack("U*").map{ |cp| "U+%4X" % cp }.join("<br/>")
         "<span class=\"n\">#{fqe}</span> | #{Unicode::SequenceName.of(fqe)} | <span class=\"n\">#{uqemqe}</span> | #{codepoints} | <span class=\"u\">#{
-          uqemqe == uqemqe[Unicode::Emoji::REGEX_INCLUDE_MQE] ? 'Minimally-Qualified (MQE)' : 'Unqualified (UQE)'
+          uqemqe == uqemqe[Unicode::Emoji::REGEX_INCLUDE_MQE] ? 'MQE' : 'UQE'
          }</span>"
       }.join("\n")
     end

@@ -23,13 +23,13 @@ title: Emoji or Text Presentation [character construction]
       <tr>
         <td><span class="c">︎</span></td>
         <td><span class="u">U+FE0E</span></td>
-        <td>Variation Selector 15</td>
+        <td>Variation Selector 15: Text Presentation Selector</td>
         <td>Prefer text</td>
       </tr>
       <tr>
         <td><span class="c">️</span></td>
         <td><span class="u">U+FE0F</span></td>
-        <td>Variation Selector 16</td>
+        <td>Variation Selector 16: Emoji Presentation Selector</td>
         <td>Prefer picture</td>
       </tr>
     </tbody>
