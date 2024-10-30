@@ -5,6 +5,7 @@ gem "unicode-x", "~> 16.0"
 gem "characteristics"
 gem "symbolify"
 gem "az", "~> 2.1"
+gem "unicode-confusable", "~> 1.12.0"
 
 # Included in unicode-x, in case one must be bumped
 gem "unicode-emoji", "~> 3.8.0"

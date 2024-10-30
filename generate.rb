@@ -2,6 +2,7 @@
 
 require "fileutils"
 require "erb"
+require "cgi"
 
 require "unicode/x"
 require "symbolify"
@@ -143,17 +144,20 @@ module UnicodePages
       }.compact.join(" ") + FCEND
     end
 
-    # def list_ignorables
-    #   "# List of Ignorable Characters\n\n" +
-    #   "Codepoint | Name | Character\n-|-|-\n" + UnicodeCharacteristics::IGNORABLE.map{ |codepoint|
-    #     char = [codepoint].pack("U")
-    #     unicode_name = char =~ /\p{Unassigned}/ ?
-    #     "*not assigned*" :
-    #     Unicode::Name.readable(char)
-    #     format("U+%.4X", char.unpack("U")[0]).rjust(9) +
-    #     " | #{ unicode_name } | <span class=\"b\">]<span>#{ char }</span>[</span>"
-    #   }.join("\n\n")
-    # end
+    def list_ignorables
+      "<table class=\"table-15-15-15-X table-last-left\"><thead><tr><th>Codepoint</th><th>Character</th><th>Category</th><th>Name</th></tr></thead><tbody>" + 
+      Unicode::Confusable::IGNORABLE[0,1000].map{ |codepoint|
+        char = [codepoint].pack("U")
+        unicode_name =  CGI.escapeHTML(Unicode::Name.readable(char))
+
+        "<tr>" \
+          "<td><span class=\"u\">#{ "U+%04X" % codepoint }</span></td>" \
+          "<td><span class=\"c\">#{ char }</span></td>" \
+          "<td><span class=\"u\">#{Unicode::Categories.category(char)}</span></td>" \
+          "<td>#{ unicode_name }</td>" \
+        "</tr>"
+      }.join("\n") + "</tbody></table>"
+    end
 
     def binding_
       binding

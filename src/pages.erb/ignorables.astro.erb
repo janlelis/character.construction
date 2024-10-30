@@ -1,0 +1,13 @@
+---
+import Layout from "../layouts/Layout.astro"
+---
+
+<Layout title="Default Ignorable Codepoints [character construction]">
+  <h1>Default Ignorable Codepoints</h1>
+
+  <div class="prelude">
+    The codepoints listed here should not render anything if they are used out-of-context or the rendering engine does not support them
+  </div>
+
+  <%= list_ignorables %>
+</Layout>

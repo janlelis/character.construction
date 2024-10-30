@@ -6,11 +6,11 @@ title: Blank Characters [character construction]
 # Blank Characters
 
 <div class="intro">
-  There are a bunch of white-space character in Unicode. Sometimes, such blank codepoints have a totally different meaning, but as a side-effect, they also do not contain any glyph.
-
+  There are a lot of white-space character in Unicode. Sometimes, such blank codepoints have a totally different meaning, but as a side-effect, they also do not contain any glyph. 
   The following list collects characters which might render no glyph. The exact behavior depends on the platform/operating system.
 
-  Please also note, some codepoints in Unicode are marked as <a href="https://idiosyncratic-ruby.com/66-ruby-has-character.html#ignorable-codepoints">ignorable</a> and often do not render <em>anything</em>, not even a space.
+  
+  Also see [Ignorables](/ignorables) for the current list of codepoints in Unicode marked as <a href="https://idiosyncratic-ruby.com/66-ruby-has-character.html#ignorable-codepoints">default ignorable codepoints</a>, which often do not render anything.
 </div>
 
 ### Whitespace / Other Invisible
