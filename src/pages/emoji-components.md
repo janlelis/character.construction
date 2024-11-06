@@ -35,11 +35,20 @@ title: Emoji Components [character construction]
 <table class="table-20-20-X table-last-left"><thead><tr><th>Codepoint</th><th>Emoji / Character</th><th>Name</th></tr></thead><tbody><tr><td><span class="u">U+200D</span></td><td><span class="c">‍</span></td><td>ZERO WIDTH JOINER</td></tr></tbody></table>
 
 
+## Variations Selector 16
+
+- VS16 (Emoji Presentation Selector) turns textual Emoji into Emoji Presentation
+- See [Emoji or Text Presentation](/emoji-vs-text) and [Unqualified Emoji](/unqualified-emoji)
+- Is [ignorable (no visible glyph)](/ignorables) when used in isolation
+
+<table class="table-20-20-X table-last-left"><thead><tr><th>Codepoint</th><th>Emoji / Character</th><th>Name</th></tr></thead><tbody><tr><td><span class="u">U+FE0F</span></td><td><span class="c">️</span></td><td>VARIATION SELECTOR-16</td></tr></tbody></table>
+
+
 ## Regional Indicatiors
 
 - Used for Region Flags
-- Standard: Should not have an Emoji presentation when used in isolation
-- Practice: Often have an Emoji presentation when used in isolation
+- Unicode Standard: Should not have an Emoji presentation when used in isolation
+- Practice: Often has an Emoji presentation when used in isolation
 
 <table class="table-20-20-X table-last-left"><thead><tr><th>Codepoint</th><th>Emoji / Character</th><th>Name</th></tr></thead><tbody><tr><td><span class="u">U+1F1E6</span></td><td><span class="c">🇦</span></td><td>REGIONAL INDICATOR SYMBOL LETTER A</td></tr>
 <tr><td><span class="u">U+1F1E7</span></td><td><span class="c">🇧</span></td><td>REGIONAL INDICATOR SYMBOL LETTER B</td></tr>
@@ -92,20 +101,9 @@ title: Emoji Components [character construction]
 <tr><td><span class="u">U+1F9B3</span></td><td><span class="c">🦳</span></td><td>EMOJI COMPONENT WHITE HAIR</td></tr></tbody></table>
 
 
-# 
-# 
-## Variations Selector 16
-
-- VS16 (Emoji Presentation Selector) turns textual Emoji into Emoji Presentation
-- See [Emoji or Text Presentation](/emoji-vs-text) and [Unqualified Emoji](/unqualified-emoji)
-- Is [ignorable (no visible glyph)](/ignorables) when used in isolation
-
-<table class="table-20-20-X table-last-left"><thead><tr><th>Codepoint</th><th>Emoji / Character</th><th>Name</th></tr></thead><tbody><tr><td><span class="u">U+FE0F</span></td><td><span class="c">️</span></td><td>VARIATION SELECTOR-16</td></tr></tbody></table>
-
-
 ## Tags
 
-- Used to create Emoji Tag Sequences: Subdivision Flags
+- Used for  Emoji Tag Sequences: Subdivision Flags
 - Is [ignorable (no visible glyph)](/ignorables) when used in isolation
 
 <table class="table-20-20-X table-last-left"><thead><tr><th>Codepoint</th><th>Emoji / Character</th><th>Name</th></tr></thead><tbody><tr><td><span class="u">U+E0030</span></td><td><span class="c">󠀰</span></td><td>TAG DIGIT ZERO</td></tr>
