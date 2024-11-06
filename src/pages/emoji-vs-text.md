@@ -1343,8 +1343,8 @@ Base Codepoint | Name | Text, +VS15 | Default, no VS | Emoji, +VS16 | Default Sh
 <span class="u">U+2733</span> | EIGHT SPOKED ASTERISK | <span class="n">✳︎</span> | <span class="n">✳</span> | <span class="n">✳️</span> | Text
 <span class="u">U+2734</span> | EIGHT POINTED BLACK STAR | <span class="n">✴︎</span> | <span class="n">✴</span> | <span class="n">✴️</span> | Text
 <span class="u">U+2747</span> | SPARKLE | <span class="n">❇︎</span> | <span class="n">❇</span> | <span class="n">❇️</span> | Text
-<span class="u">U+  A9</span> | COPYRIGHT SIGN | <span class="n">©︎</span> | <span class="n">©</span> | <span class="n">©️</span> | Text
-<span class="u">U+  AE</span> | REGISTERED SIGN | <span class="n">®︎</span> | <span class="n">®</span> | <span class="n">®️</span> | Text
+<span class="u">U+00A9</span> | COPYRIGHT SIGN | <span class="n">©︎</span> | <span class="n">©</span> | <span class="n">©️</span> | Text
+<span class="u">U+00AE</span> | REGISTERED SIGN | <span class="n">®︎</span> | <span class="n">®</span> | <span class="n">®️</span> | Text
 <span class="u">U+2122</span> | TRADE MARK SIGN | <span class="n">™︎</span> | <span class="n">™</span> | <span class="n">™️</span> | Text
 <span class="u">U+1FADF</span> | SPLATTER | <span class="n">🫟︎</span> | <span class="n">🫟</span> | <span class="n">🫟️</span> | Emoji
 <span class="u">U+1F51F</span> | KEYCAP TEN | <span class="n">🔟︎</span> | <span class="n">🔟</span> | <span class="n">🔟️</span> | Emoji

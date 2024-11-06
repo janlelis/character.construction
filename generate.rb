@@ -48,7 +48,7 @@ module UnicodePages
           "### #{nice_sub_group}\n\n" +
           "Name | Emoji | Codepoint/s\n-|-|-\n" + emoji.map{ |e|
             unicode_name = (Unicode::SequenceName.of(e) || Unicode::Name.of(e) || "").sub(/\(emoji style\)/, '')
-            codepoints = e.unpack("U*").map{ |cp| "U+%4X" % cp }.join("<br/>")
+            codepoints = e.unpack("U*").map{ |cp| "U+%04X" % cp }.join("<br/>")
             unicode_name + '| <span class="f">' + e + '</span> | ' + codepoints
           }.join("\n") #+ "\n{:.left-align .table-20-X}"
         }.join("\n\n")
@@ -61,7 +61,7 @@ module UnicodePages
         next unless e == e[Unicode::Emoji::REGEX_BASIC] || e == e[Unicode::Emoji::REGEX_TEXT]
         e.gsub! /\u{FE0E}|\u{FE0F}/, ""
         unicode_name = (Unicode::SequenceName.of(e) || Unicode::Name.of(e) || "").sub(/\(emoji style\)/, '')
-        codepoints = e.unpack("U*").map{ |cp| "U+%4X" % cp }.join("<br/>")
+        codepoints = e.unpack("U*").map{ |cp| "U+%04X" % cp }.join("<br/>")
         "<span class=\"u\">#{ codepoints }</span> | " +
         "#{ unicode_name } | " +
         "<span class=\"n\">#{
@@ -78,7 +78,7 @@ module UnicodePages
     def qualify_emoji
       "Fully-Qualified (FQE) | Emoji Name | Non-FQE | Codepoints | Type \n-|-|-|-|-\n" + 
       Unicode::SequenceName::INDEX[:EMOJI_NOT_QUALIFIED].map { |uqemqe, fqe|
-        codepoints = uqemqe.unpack("U*").map{ |cp| "U+%4X" % cp }.join("<br/>")
+        codepoints = uqemqe.unpack("U*").map{ |cp| "U+%04X" % cp }.join("<br/>")
         "<span class=\"n\">#{fqe}</span> | #{Unicode::SequenceName.of(fqe)} | <span class=\"n\">#{uqemqe}</span> | #{codepoints} | <span class=\"u\">#{
           uqemqe == uqemqe[Unicode::Emoji::REGEX_INCLUDE_MQE] ? 'MQE' : 'UQE'
          }</span>"
@@ -151,12 +151,27 @@ module UnicodePages
         unicode_name =  CGI.escapeHTML(Unicode::Name.readable(char))
 
         "<tr>" \
-          "<td><span class=\"u\">#{ "U+%04X" % codepoint }</span></td>" \
-          "<td><span class=\"c\">#{ char }</span></td>" \
-          "<td><span class=\"u\">#{Unicode::Categories.category(char)}</span></td>" \
-          "<td>#{ unicode_name }</td>" \
+        "<td><span class=\"u\">#{ "U+%04X" % codepoint }</span></td>" \
+        "<td><span class=\"c\">#{ char }</span></td>" \
+        "<td><span class=\"u\">#{Unicode::Categories.category(char)}</span></td>" \
+        "<td>#{ unicode_name }</td>" \
         "</tr>"
       }.join("\n") + "</tbody></table>"
+    end
+    
+    def list_components(*which)
+      "<table class=\"table-20-20-X table-last-left\">"\
+      "<thead><tr><th>Codepoint</th><th>Emoji / Character</th><th>Name</th></tr></thead><tbody>" + 
+      which.map{ |cp|
+      char = [cp].pack("U")
+      unicode_name = Unicode::Name.of(char)
+      codepoint = "U+%04X" % cp
+      "<tr>" \
+        "<td><span class=\"u\">#{ codepoint }</span></td>" \
+        "<td><span class=\"c\">#{ char }</span></td>" \
+        "<td>#{ unicode_name }</td>" \
+      "</tr>"
+    }.join("\n")+ "</tbody></table>\n\n"
     end
 
     def binding_

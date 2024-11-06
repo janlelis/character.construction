@@ -8,6 +8,11 @@
   th:nth-child(3) { width: 15%; }
 }
 
+.table-20-20-X {
+  th:nth-child(1) { width: 20%; }
+  th:nth-child(2) { width: 20%; }
+}
+
 .table-last-left {
   tr {
     th:last-child,

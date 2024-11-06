@@ -1,0 +1,65 @@
+---
+layout: ../layouts/Layout.astro
+title: Emoji Components [character construction]
+---
+
+# Emoji Components
+
+<div class="prelude">Special Emoji codepoints to be combined to create Emoji sequences</div>
+
+## Components for Keycaps
+
+- Used for Emoji Keycap Sequences
+- Should not have an Emoji presentation when used in isolation
+
+<%= list_components 35, 42, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 8419 %>
+
+## ZWJ: Zero-width Joiner
+
+- Used for Emoji Zwj Sequences
+- Is [ignorable (no visible glyph)](/ignorables) when used in isolation
+
+<%= list_components Unicode::Emoji::ZWJ %>
+
+## Regional Indicatiors
+
+- Used for Region Flags
+- Unicode Standard: Should not have an Emoji presentation when used in isolation
+- Practice: Often has an Emoji presentation when used in isolation
+
+<%= list_components *Range.new(?🇦.ord, ?🇿.ord) %>
+
+## Skin Tone Modifiers
+
+- Used to modifiy base Emoji
+- Should have an Emoji presentation when used in isolation
+
+<%= list_components *Range.new(?🏻.ord, ?🏿.ord) %>
+
+## Hair Components
+
+- Used to modifiy base Emoji
+- Should have an Emoji presentation when used in isolation
+
+<%= list_components *Range.new(?🦰.ord, ?🦳.ord) %>
+
+# 
+# 
+## Variations Selector 16
+
+- VS16 (Emoji Presentation Selector) turns textual Emoji into Emoji Presentation
+- See [Emoji or Text Presentation](/emoji-vs-text) and [Unqualified Emoji](/unqualified-emoji)
+- Is [ignorable (no visible glyph)](/ignorables) when used in isolation
+
+<%= list_components 65039 %>
+
+## Tags
+
+- Used for  Emoji Tag Sequences: Subdivision Flags
+- Is [ignorable (no visible glyph)](/ignorables) when used in isolation
+
+<%= list_components *Unicode::Emoji::SPEC_TAGS, Unicode::Emoji::CANCEL_TAG %>
+
+<style>
+h2 { margin-bottom: 0.5em; text-align: left;}
+</style>

@@ -4016,8 +4016,8 @@ PART ALTERNATION MARK | <span class="f">〽️</span> | U+303D<br/>U+FE0F
 EIGHT SPOKED ASTERISK | <span class="f">✳️</span> | U+2733<br/>U+FE0F
 EIGHT POINTED BLACK STAR | <span class="f">✴️</span> | U+2734<br/>U+FE0F
 SPARKLE | <span class="f">❇️</span> | U+2747<br/>U+FE0F
-COPYRIGHT SIGN | <span class="f">©️</span> | U+  A9<br/>U+FE0F
-REGISTERED SIGN | <span class="f">®️</span> | U+  AE<br/>U+FE0F
+COPYRIGHT SIGN | <span class="f">©️</span> | U+00A9<br/>U+FE0F
+REGISTERED SIGN | <span class="f">®️</span> | U+00AE<br/>U+FE0F
 TRADE MARK SIGN | <span class="f">™️</span> | U+2122<br/>U+FE0F
 SPLATTER| <span class="f">🫟</span> | U+1FADF
 
@@ -4025,18 +4025,18 @@ SPLATTER| <span class="f">🫟</span> | U+1FADF
 
 Name | Emoji | Codepoint/s
 -|-|-
-KEYCAP NUMBER SIGN| <span class="f">#️⃣</span> | U+  23<br/>U+FE0F<br/>U+20E3
-KEYCAP ASTERISK| <span class="f">*️⃣</span> | U+  2A<br/>U+FE0F<br/>U+20E3
-KEYCAP DIGIT ZERO| <span class="f">0️⃣</span> | U+  30<br/>U+FE0F<br/>U+20E3
-KEYCAP DIGIT ONE| <span class="f">1️⃣</span> | U+  31<br/>U+FE0F<br/>U+20E3
-KEYCAP DIGIT TWO| <span class="f">2️⃣</span> | U+  32<br/>U+FE0F<br/>U+20E3
-KEYCAP DIGIT THREE| <span class="f">3️⃣</span> | U+  33<br/>U+FE0F<br/>U+20E3
-KEYCAP DIGIT FOUR| <span class="f">4️⃣</span> | U+  34<br/>U+FE0F<br/>U+20E3
-KEYCAP DIGIT FIVE| <span class="f">5️⃣</span> | U+  35<br/>U+FE0F<br/>U+20E3
-KEYCAP DIGIT SIX| <span class="f">6️⃣</span> | U+  36<br/>U+FE0F<br/>U+20E3
-KEYCAP DIGIT SEVEN| <span class="f">7️⃣</span> | U+  37<br/>U+FE0F<br/>U+20E3
-KEYCAP DIGIT EIGHT| <span class="f">8️⃣</span> | U+  38<br/>U+FE0F<br/>U+20E3
-KEYCAP DIGIT NINE| <span class="f">9️⃣</span> | U+  39<br/>U+FE0F<br/>U+20E3
+KEYCAP NUMBER SIGN| <span class="f">#️⃣</span> | U+0023<br/>U+FE0F<br/>U+20E3
+KEYCAP ASTERISK| <span class="f">*️⃣</span> | U+002A<br/>U+FE0F<br/>U+20E3
+KEYCAP DIGIT ZERO| <span class="f">0️⃣</span> | U+0030<br/>U+FE0F<br/>U+20E3
+KEYCAP DIGIT ONE| <span class="f">1️⃣</span> | U+0031<br/>U+FE0F<br/>U+20E3
+KEYCAP DIGIT TWO| <span class="f">2️⃣</span> | U+0032<br/>U+FE0F<br/>U+20E3
+KEYCAP DIGIT THREE| <span class="f">3️⃣</span> | U+0033<br/>U+FE0F<br/>U+20E3
+KEYCAP DIGIT FOUR| <span class="f">4️⃣</span> | U+0034<br/>U+FE0F<br/>U+20E3
+KEYCAP DIGIT FIVE| <span class="f">5️⃣</span> | U+0035<br/>U+FE0F<br/>U+20E3
+KEYCAP DIGIT SIX| <span class="f">6️⃣</span> | U+0036<br/>U+FE0F<br/>U+20E3
+KEYCAP DIGIT SEVEN| <span class="f">7️⃣</span> | U+0037<br/>U+FE0F<br/>U+20E3
+KEYCAP DIGIT EIGHT| <span class="f">8️⃣</span> | U+0038<br/>U+FE0F<br/>U+20E3
+KEYCAP DIGIT NINE| <span class="f">9️⃣</span> | U+0039<br/>U+FE0F<br/>U+20E3
 KEYCAP TEN| <span class="f">🔟</span> | U+1F51F
 
 ### Alphanum
