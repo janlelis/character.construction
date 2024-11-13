@@ -76,10 +76,11 @@ module UnicodePages
     end
 
     def qualify_emoji
-      "Fully-Qualified (FQE) | Emoji Name | Non-FQE | Codepoints | Type \n-|-|-|-|-\n" + 
+      "Fully-Qualified (FQE) | Codepoints (FQE) | Emoji Name | Non-FQE | Codepoints | Type \n-|-|-|-|-|-\n" + 
       Unicode::SequenceName::INDEX[:EMOJI_NOT_QUALIFIED].map { |uqemqe, fqe|
-        codepoints = uqemqe.unpack("U*").map{ |cp| "U+%04X" % cp }.join("<br/>")
-        "<span class=\"n\">#{fqe}</span> | #{Unicode::SequenceName.of(fqe)} | <span class=\"n\">#{uqemqe}</span> | #{codepoints} | <span class=\"u\">#{
+        codepoints_fqe = fqe.unpack("U*").map{ |cp| res = "U+%04X" % cp; res == "U+FE0F" ? "<b>#{res}</b>" : res}.join("<br/>")
+        codepoints = uqemqe.unpack("U*").map{ |cp| res = "U+%04X" % cp; res == "U+FE0F" ? "<b>#{res}</b>" : res}.join("<br/>")
+        "<span class=\"n\">#{fqe}</span> | #{codepoints_fqe} | #{Unicode::SequenceName.of(fqe)} | <span class=\"n\">#{uqemqe}</span> | #{codepoints} | <span class=\"u\">#{
           uqemqe == uqemqe[Unicode::Emoji::REGEX_INCLUDE_MQE] ? 'MQE' : 'UQE'
          }</span>"
       }.join("\n")
