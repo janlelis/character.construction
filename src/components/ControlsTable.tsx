@@ -13,9 +13,21 @@ import {
 import { uPlus } from "../lib/support";
 import { unicodeName, unicodeAliases } from "unicode-name";
 
+const ESCAPES = {
+  0: '\\0',
+  7: '\\a',
+  8: '\\b',
+  9: '\\t',
+  10: '\\n',
+  11: '\\v',
+  12: '\\f',
+  13: '\\r',
+}
+
 type UnicodeControlEntry = {
   codepoint: number
   character: string
+  escaped?: string
   abbreviation: Array<string>
   name: Array<string>
 }
@@ -24,10 +36,12 @@ const codepointToEntry = (codepoint) : UnicodeControlEntry => {
   const character = String.fromCodePoint(codepoint)
       const aliases = unicodeAliases(character)
       const abbreviation = aliases.abbreviation
+      const escaped = ESCAPES[codepoint] || `\\x${codepoint.toString(16).toLowerCase().padStart(2,"0")}`
       const name = [...(aliases.control || [] ), ...(aliases.figment || [] )]
       return {
         codepoint,
         character,
+        escaped,
         abbreviation,
         name,
       }
@@ -56,6 +70,11 @@ const columns = ({caret}) => ([
     cell: props => <span className="nv">^{String.fromCodePoint(props.row.original.codepoint === 127 ? 63 : props.row.original.codepoint + 64)}</span>,
     id: "caret",
     header: "Caret",
+  }),
+  columnHelper.display({
+    cell: props => props.row.original.escaped && <span className="nv">{ props.row.original.escaped }</span>,
+    id: "escaped",
+    header: "Escaped",
   }),
   columnHelper.display({
     cell: props => <span className="nv">{props.row.original.codepoint}</span>,
