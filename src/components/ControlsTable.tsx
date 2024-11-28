@@ -53,7 +53,7 @@ const getControlSymbol = (codepoint) => {
 
 const columnHelper = createColumnHelper<UnicodeControlEntry>()
 
-const columns = ({caret}) => ([
+const columns = ({caret, escaped}) => ([
   columnHelper.accessor('codepoint', {
     cell: info => <span className="u">{uPlus(info.getValue())}</span>,
     header: "Codepoint",
@@ -103,10 +103,12 @@ const columns = ({caret}) => ([
     sortDescFirst: false
   }),
 ].filter((column) => {
-  return caret || column.id !== "caret"
+  return column.id === "caret" ? caret :
+         column.id === "escaped" ? escaped :
+         true
 }))
 
-export function ControlsTable({codepoints, caret}) {
+export function ControlsTable({codepoints, caret, escaped}) {
   const [data, setData] = React.useState<UnicodeControlEntry[]>((codepoints || []).map((cp) => codepointToEntry(cp)))
   const [sorting, setSorting] = React.useState<SortingState>([
     {
@@ -123,7 +125,7 @@ export function ControlsTable({codepoints, caret}) {
 
   const table = useReactTable({
     data,
-    columns: columns({caret}),
+    columns: columns({caret, escaped}),
     getCoreRowModel: getCoreRowModel(),
     getSortedRowModel: getSortedRowModel(), //client-side sorting
     onSortingChange: setSorting,
