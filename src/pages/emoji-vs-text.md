@@ -122,6 +122,7 @@ Base Codepoint | Name | Text, +VS15 | Default, no VS | Emoji, +VS16 | Default Sh
 <span class="u">U+1F62F</span> | HUSHED FACE | <span class="n">😯︎</span> | <span class="n">😯</span> | <span class="n">😯️</span> | Emoji
 <span class="u">U+1F632</span> | ASTONISHED FACE | <span class="n">😲︎</span> | <span class="n">😲</span> | <span class="n">😲️</span> | Emoji
 <span class="u">U+1F633</span> | FLUSHED FACE | <span class="n">😳︎</span> | <span class="n">😳</span> | <span class="n">😳️</span> | Emoji
+<span class="u">U+1FAEA</span> | DISTORTED FACE | <span class="n">🫪︎</span> | <span class="n">🫪</span> | <span class="n">🫪️</span> | Emoji
 <span class="u">U+1F97A</span> | FACE WITH PLEADING EYES | <span class="n">🥺︎</span> | <span class="n">🥺</span> | <span class="n">🥺️</span> | Emoji
 <span class="u">U+1F979</span> | FACE HOLDING BACK TEARS | <span class="n">🥹︎</span> | <span class="n">🥹</span> | <span class="n">🥹️</span> | Emoji
 <span class="u">U+1F626</span> | FROWNING FACE WITH OPEN MOUTH | <span class="n">😦︎</span> | <span class="n">😦</span> | <span class="n">😦️</span> | Emoji
@@ -193,6 +194,7 @@ Base Codepoint | Name | Text, +VS15 | Default, no VS | Emoji, +VS16 | Default Sh
 <span class="u">U+1F48B</span> | KISS MARK | <span class="n">💋︎</span> | <span class="n">💋</span> | <span class="n">💋️</span> | Emoji
 <span class="u">U+1F4AF</span> | HUNDRED POINTS SYMBOL | <span class="n">💯︎</span> | <span class="n">💯</span> | <span class="n">💯️</span> | Emoji
 <span class="u">U+1F4A2</span> | ANGER SYMBOL | <span class="n">💢︎</span> | <span class="n">💢</span> | <span class="n">💢️</span> | Emoji
+<span class="u">U+1FAEF</span> | FIGHT CLOUD | <span class="n">🫯︎</span> | <span class="n">🫯</span> | <span class="n">🫯️</span> | Emoji
 <span class="u">U+1F4A5</span> | COLLISION SYMBOL | <span class="n">💥︎</span> | <span class="n">💥</span> | <span class="n">💥️</span> | Emoji
 <span class="u">U+1F4AB</span> | DIZZY SYMBOL | <span class="n">💫︎</span> | <span class="n">💫</span> | <span class="n">💫️</span> | Emoji
 <span class="u">U+1F4A6</span> | SPLASHING SWEAT SYMBOL | <span class="n">💦︎</span> | <span class="n">💦</span> | <span class="n">💦️</span> | Emoji
@@ -316,6 +318,7 @@ Base Codepoint | Name | Text, +VS15 | Default, no VS | Emoji, +VS16 | Default Sh
 <span class="u">U+1F9DE</span> | GENIE | <span class="n">🧞︎</span> | <span class="n">🧞</span> | <span class="n">🧞️</span> | Emoji
 <span class="u">U+1F9DF</span> | ZOMBIE | <span class="n">🧟︎</span> | <span class="n">🧟</span> | <span class="n">🧟️</span> | Emoji
 <span class="u">U+1F9CC</span> | TROLL | <span class="n">🧌︎</span> | <span class="n">🧌</span> | <span class="n">🧌️</span> | Emoji
+<span class="u">U+1FAC8</span> | HAIRY CREATURE | <span class="n">🫈︎</span> | <span class="n">🫈</span> | <span class="n">🫈️</span> | Emoji
 <span class="u">U+1F486</span> | FACE MASSAGE | <span class="n">💆︎</span> | <span class="n">💆</span> | <span class="n">💆️</span> | Emoji
 <span class="u">U+1F487</span> | HAIRCUT | <span class="n">💇︎</span> | <span class="n">💇</span> | <span class="n">💇️</span> | Emoji
 <span class="u">U+1F6B6</span> | PEDESTRIAN | <span class="n">🚶︎</span> | <span class="n">🚶</span> | <span class="n">🚶️</span> | Emoji
@@ -455,6 +458,7 @@ Base Codepoint | Name | Text, +VS15 | Default, no VS | Emoji, +VS16 | Default Sh
 <span class="u">U+1F433</span> | SPOUTING WHALE | <span class="n">🐳︎</span> | <span class="n">🐳</span> | <span class="n">🐳️</span> | Emoji
 <span class="u">U+1F40B</span> | WHALE | <span class="n">🐋︎</span> | <span class="n">🐋</span> | <span class="n">🐋️</span> | Emoji
 <span class="u">U+1F42C</span> | DOLPHIN | <span class="n">🐬︎</span> | <span class="n">🐬</span> | <span class="n">🐬️</span> | Emoji
+<span class="u">U+1FACD</span> | ORCA | <span class="n">🫍︎</span> | <span class="n">🫍</span> | <span class="n">🫍️</span> | Emoji
 <span class="u">U+1F9AD</span> | SEAL | <span class="n">🦭︎</span> | <span class="n">🦭</span> | <span class="n">🦭️</span> | Emoji
 <span class="u">U+1F41F</span> | FISH | <span class="n">🐟︎</span> | <span class="n">🐟</span> | <span class="n">🐟️</span> | Emoji
 <span class="u">U+1F420</span> | TROPICAL FISH | <span class="n">🐠︎</span> | <span class="n">🐠</span> | <span class="n">🐠️</span> | Emoji
@@ -652,6 +656,7 @@ Base Codepoint | Name | Text, +VS15 | Default, no VS | Emoji, +VS16 | Default Sh
 <span class="u">U+1F9ED</span> | COMPASS | <span class="n">🧭︎</span> | <span class="n">🧭</span> | <span class="n">🧭️</span> | Emoji
 <span class="u">U+1F3D4</span> | SNOW CAPPED MOUNTAIN | <span class="n">🏔︎</span> | <span class="n">🏔</span> | <span class="n">🏔️</span> | Text
 <span class="u">U+26F0</span> | MOUNTAIN | <span class="n">⛰︎</span> | <span class="n">⛰</span> | <span class="n">⛰️</span> | Text
+<span class="u">U+1F6D8</span> | LANDSLIDE | <span class="n">🛘︎</span> | <span class="n">🛘</span> | <span class="n">🛘️</span> | Emoji
 <span class="u">U+1F30B</span> | VOLCANO | <span class="n">🌋︎</span> | <span class="n">🌋</span> | <span class="n">🌋️</span> | Emoji
 <span class="u">U+1F5FB</span> | MOUNT FUJI | <span class="n">🗻︎</span> | <span class="n">🗻</span> | <span class="n">🗻️</span> | Emoji
 <span class="u">U+1F3D5</span> | CAMPING | <span class="n">🏕︎</span> | <span class="n">🏕</span> | <span class="n">🏕️</span> | Text
@@ -1012,10 +1017,11 @@ Base Codepoint | Name | Text, +VS15 | Default, no VS | Emoji, +VS16 | Default Sh
 <span class="u">U+1F3A7</span> | HEADPHONE | <span class="n">🎧︎</span> | <span class="n">🎧</span> | <span class="n">🎧️</span> | Emoji
 <span class="u">U+1F4FB</span> | RADIO | <span class="n">📻︎</span> | <span class="n">📻</span> | <span class="n">📻️</span> | Emoji
 <span class="u">U+1F3B7</span> | SAXOPHONE | <span class="n">🎷︎</span> | <span class="n">🎷</span> | <span class="n">🎷️</span> | Emoji
+<span class="u">U+1F3BA</span> | TRUMPET | <span class="n">🎺︎</span> | <span class="n">🎺</span> | <span class="n">🎺️</span> | Emoji
+<span class="u">U+1FA8A</span> | TROMBONE | <span class="n">🪊︎</span> | <span class="n">🪊</span> | <span class="n">🪊️</span> | Emoji
 <span class="u">U+1FA97</span> | ACCORDION | <span class="n">🪗︎</span> | <span class="n">🪗</span> | <span class="n">🪗️</span> | Emoji
 <span class="u">U+1F3B8</span> | GUITAR | <span class="n">🎸︎</span> | <span class="n">🎸</span> | <span class="n">🎸️</span> | Emoji
 <span class="u">U+1F3B9</span> | MUSICAL KEYBOARD | <span class="n">🎹︎</span> | <span class="n">🎹</span> | <span class="n">🎹️</span> | Emoji
-<span class="u">U+1F3BA</span> | TRUMPET | <span class="n">🎺︎</span> | <span class="n">🎺</span> | <span class="n">🎺️</span> | Emoji
 <span class="u">U+1F3BB</span> | VIOLIN | <span class="n">🎻︎</span> | <span class="n">🎻</span> | <span class="n">🎻️</span> | Emoji
 <span class="u">U+1FA95</span> | BANJO | <span class="n">🪕︎</span> | <span class="n">🪕</span> | <span class="n">🪕️</span> | Emoji
 <span class="u">U+1F941</span> | DRUM WITH DRUMSTICKS | <span class="n">🥁︎</span> | <span class="n">🥁</span> | <span class="n">🥁️</span> | Emoji
@@ -1076,8 +1082,9 @@ Base Codepoint | Name | Text, +VS15 | Default, no VS | Emoji, +VS16 | Default Sh
 <span class="u">U+1F4D1</span> | BOOKMARK TABS | <span class="n">📑︎</span> | <span class="n">📑</span> | <span class="n">📑️</span> | Emoji
 <span class="u">U+1F516</span> | BOOKMARK | <span class="n">🔖︎</span> | <span class="n">🔖</span> | <span class="n">🔖️</span> | Emoji
 <span class="u">U+1F3F7</span> | LABEL | <span class="n">🏷︎</span> | <span class="n">🏷</span> | <span class="n">🏷️</span> | Text
-<span class="u">U+1F4B0</span> | MONEY BAG | <span class="n">💰︎</span> | <span class="n">💰</span> | <span class="n">💰️</span> | Emoji
 <span class="u">U+1FA99</span> | COIN | <span class="n">🪙︎</span> | <span class="n">🪙</span> | <span class="n">🪙️</span> | Emoji
+<span class="u">U+1F4B0</span> | MONEY BAG | <span class="n">💰︎</span> | <span class="n">💰</span> | <span class="n">💰️</span> | Emoji
+<span class="u">U+1FA8E</span> | TREASURE CHEST | <span class="n">🪎︎</span> | <span class="n">🪎</span> | <span class="n">🪎️</span> | Emoji
 <span class="u">U+1F4B4</span> | BANKNOTE WITH YEN SIGN | <span class="n">💴︎</span> | <span class="n">💴</span> | <span class="n">💴️</span> | Emoji
 <span class="u">U+1F4B5</span> | BANKNOTE WITH DOLLAR SIGN | <span class="n">💵︎</span> | <span class="n">💵</span> | <span class="n">💵️</span> | Emoji
 <span class="u">U+1F4B6</span> | BANKNOTE WITH EURO SIGN | <span class="n">💶︎</span> | <span class="n">💶</span> | <span class="n">💶️</span> | Emoji
