@@ -2147,11 +2147,11 @@ __metadata:
     react-dom: "npm:^18.3.1"
     sass-embedded: "npm:^1.79.2"
     typescript: "npm:^5.6.2"
-    unicode-block: "npm:^1.0.1"
-    unicode-category: "npm:^1.0.0"
-    unicode-name: "npm:^1.0.4"
-    unicode-number: "npm:^1.0.0"
-    unicode-script: "npm:^1.0.2"
+    unicode-block: "npm:^1.1.0"
+    unicode-category: "npm:^1.1.0"
+    unicode-name: "npm:^1.1.0"
+    unicode-number: "npm:^1.1.0"
+    unicode-script: "npm:^1.2.0"
     vue: "npm:^3.5.10"
     vue-echarts: "npm:^7.0.3"
   languageName: unknown
@@ -5760,38 +5760,38 @@ __metadata:
   languageName: node
   linkType: hard
 
-"unicode-block@npm:^1.0.1":
-  version: 1.0.1
-  resolution: "unicode-block@npm:1.0.1"
-  checksum: 10c0/3ed5239f7a03ba799fc2d996bd8a967e6ac572136c65cd0514f3ac4cfb78079b55f8dcdc117653a5b83aa386a6e158df00c9cfdc468e58ebea8ddfe69bfee314
+"unicode-block@npm:^1.1.0":
+  version: 1.1.0
+  resolution: "unicode-block@npm:1.1.0"
+  checksum: 10c0/4dbc7186877f3d213a61dfedfa5371c50a4d45b79ebe833b4a387fb3b4c7a4226eca0aa57ee9f6f7ece07208431bcf67f8b5d21594a10ceaeeb0c49151067528
   languageName: node
   linkType: hard
 
-"unicode-category@npm:^1.0.0":
-  version: 1.0.0
-  resolution: "unicode-category@npm:1.0.0"
-  checksum: 10c0/5653a746dfb3e6df4b852f5b0c74f9947ac19d9dec7abf858201307db62aa1f32298aac118805b2970728ed01de55487a0e32164d3ccbf8da7937ceeb1470638
+"unicode-category@npm:^1.1.0":
+  version: 1.1.0
+  resolution: "unicode-category@npm:1.1.0"
+  checksum: 10c0/d70a03611419ea56305357c236ed6a38297babf47aed8f1c817a016adf3e8d04804f5bb7cea7e6f7af3188e00f63406eca1315577982b3924744d699d3b93215
   languageName: node
   linkType: hard
 
-"unicode-name@npm:^1.0.4":
-  version: 1.0.4
-  resolution: "unicode-name@npm:1.0.4"
-  checksum: 10c0/fcb697b3da66fc9d789f4d89daaeecdae2d708726b304fefade463e69df5381447da8ef1ab61ac0f86046a2a3033a64c576a8c1a3fbd0279b2f7b6fd7d02ec01
+"unicode-name@npm:^1.1.0":
+  version: 1.1.0
+  resolution: "unicode-name@npm:1.1.0"
+  checksum: 10c0/a6743ffd2f58b0c74cf9cf707791e38b55cf3b9cdea043094f6a2c0c2215cc96a66ec02d4eac2fce6ed462cfe17cadea858ea905b27f9c0314df1e7cb3118c6a
   languageName: node
   linkType: hard
 
-"unicode-number@npm:^1.0.0":
-  version: 1.0.0
-  resolution: "unicode-number@npm:1.0.0"
-  checksum: 10c0/afa2009d6f162b7f5e82c727f390debccd3de1146a7414b9f91a49adde4edec77d2954a4dd0f46e7a59adb79f8693e64d96b727bb3e75a6ba4c06ad2c3e003d1
+"unicode-number@npm:^1.1.0":
+  version: 1.1.0
+  resolution: "unicode-number@npm:1.1.0"
+  checksum: 10c0/edb8389ee996f15ce0b43281820dfec3276547af75a1f61224dc59ce06eb64ab2e067ad8b8e23ff562684e5ff15f5930d02305f4b601c86491ecb2ed1825df1f
   languageName: node
   linkType: hard
 
-"unicode-script@npm:^1.0.2":
-  version: 1.0.2
-  resolution: "unicode-script@npm:1.0.2"
-  checksum: 10c0/d7c7b694cff9fd309af2e37d5c5e8ddab6fd36c0aac0e2c40e1c675cf721a04284de8297e47ce42bcd16f9ca9436a78a9e9eb3a6effb4900eae8b8ca00cdb352
+"unicode-script@npm:^1.2.0":
+  version: 1.2.0
+  resolution: "unicode-script@npm:1.2.0"
+  checksum: 10c0/2a52e7349e834ef6305af2303e145247a28db8faa6f2818f5dd7588796666a681aee927589cc3cac08e6e43570e1c8adefca49765da2a939cfea448a111637b4
   languageName: node
   linkType: hard
 
