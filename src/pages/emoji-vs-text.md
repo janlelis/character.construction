@@ -53,6 +53,7 @@ Base Codepoint | Name | Text, +VS15 | Default, no VS | Emoji, +VS16 | Default Sh
 <span class="u">U+1F642</span> | SLIGHTLY SMILING FACE | <span class="n">🙂︎</span> | <span class="n">🙂</span> | <span class="n">🙂️</span> | Emoji
 <span class="u">U+1F643</span> | UPSIDE-DOWN FACE | <span class="n">🙃︎</span> | <span class="n">🙃</span> | <span class="n">🙃️</span> | Emoji
 <span class="u">U+1FAE0</span> | MELTING FACE | <span class="n">🫠︎</span> | <span class="n">🫠</span> | <span class="n">🫠️</span> | Emoji
+<span class="u">U+1FAEB</span> | CRACKING FACE | <span class="n">🫫︎</span> | <span class="n">🫫</span> | <span class="n">🫫️</span> | Emoji
 <span class="u">U+1F609</span> | WINKING FACE | <span class="n">😉︎</span> | <span class="n">😉</span> | <span class="n">😉️</span> | Emoji
 <span class="u">U+1F60A</span> | SMILING FACE WITH SMILING EYES | <span class="n">😊︎</span> | <span class="n">😊</span> | <span class="n">😊️</span> | Emoji
 <span class="u">U+1F607</span> | SMILING FACE WITH HALO | <span class="n">😇︎</span> | <span class="n">😇</span> | <span class="n">😇️</span> | Emoji
@@ -234,6 +235,8 @@ Base Codepoint | Name | Text, +VS15 | Default, no VS | Emoji, +VS16 | Default Sh
 <span class="u">U+1FAF5</span> | INDEX POINTING AT THE VIEWER | <span class="n">🫵︎</span> | <span class="n">🫵</span> | <span class="n">🫵️</span> | Emoji
 <span class="u">U+1F44D</span> | THUMBS UP SIGN | <span class="n">👍︎</span> | <span class="n">👍</span> | <span class="n">👍️</span> | Emoji
 <span class="u">U+1F44E</span> | THUMBS DOWN SIGN | <span class="n">👎︎</span> | <span class="n">👎</span> | <span class="n">👎️</span> | Emoji
+<span class="u">U+1FAF9</span> | LEFTWARDS THUMB SIGN | <span class="n">🫹︎</span> | <span class="n">🫹</span> | <span class="n">🫹️</span> | Emoji
+<span class="u">U+1FAFA</span> | RIGHTWARDS THUMB SIGN | <span class="n">🫺︎</span> | <span class="n">🫺</span> | <span class="n">🫺️</span> | Emoji
 <span class="u">U+270A</span> | RAISED FIST | <span class="n">✊︎</span> | <span class="n">✊</span> | <span class="n">✊️</span> | Emoji
 <span class="u">U+1F44A</span> | FISTED HAND SIGN | <span class="n">👊︎</span> | <span class="n">👊</span> | <span class="n">👊️</span> | Emoji
 <span class="u">U+1F91B</span> | LEFT-FACING FIST | <span class="n">🤛︎</span> | <span class="n">🤛</span> | <span class="n">🤛️</span> | Emoji
@@ -475,6 +478,7 @@ Base Codepoint | Name | Text, +VS15 | Default, no VS | Emoji, +VS16 | Default Sh
 <span class="u">U+1F9AA</span> | OYSTER | <span class="n">🦪︎</span> | <span class="n">🦪</span> | <span class="n">🦪️</span> | Emoji
 <span class="u">U+1F40C</span> | SNAIL | <span class="n">🐌︎</span> | <span class="n">🐌</span> | <span class="n">🐌️</span> | Emoji
 <span class="u">U+1F98B</span> | BUTTERFLY | <span class="n">🦋︎</span> | <span class="n">🦋</span> | <span class="n">🦋️</span> | Emoji
+<span class="u">U+1FACC</span> | MONARCH BUTTERFLY | <span class="n">🫌︎</span> | <span class="n">🫌</span> | <span class="n">🫌️</span> | Emoji
 <span class="u">U+1F41B</span> | BUG | <span class="n">🐛︎</span> | <span class="n">🐛</span> | <span class="n">🐛️</span> | Emoji
 <span class="u">U+1F41C</span> | ANT | <span class="n">🐜︎</span> | <span class="n">🐜</span> | <span class="n">🐜️</span> | Emoji
 <span class="u">U+1F41D</span> | HONEYBEE | <span class="n">🐝︎</span> | <span class="n">🐝</span> | <span class="n">🐝️</span> | Emoji
@@ -545,6 +549,7 @@ Base Codepoint | Name | Text, +VS15 | Default, no VS | Emoji, +VS16 | Default Sh
 <span class="u">U+1F336</span> | HOT PEPPER | <span class="n">🌶︎</span> | <span class="n">🌶</span> | <span class="n">🌶️</span> | Text
 <span class="u">U+1FAD1</span> | BELL PEPPER | <span class="n">🫑︎</span> | <span class="n">🫑</span> | <span class="n">🫑️</span> | Emoji
 <span class="u">U+1F952</span> | CUCUMBER | <span class="n">🥒︎</span> | <span class="n">🥒</span> | <span class="n">🥒️</span> | Emoji
+<span class="u">U+1FADD</span> | PICKLE | <span class="n">🫝︎</span> | <span class="n">🫝</span> | <span class="n">🫝️</span> | Emoji
 <span class="u">U+1F96C</span> | LEAFY GREEN | <span class="n">🥬︎</span> | <span class="n">🥬</span> | <span class="n">🥬️</span> | Emoji
 <span class="u">U+1F966</span> | BROCCOLI | <span class="n">🥦︎</span> | <span class="n">🥦</span> | <span class="n">🥦️</span> | Emoji
 <span class="u">U+1F9C4</span> | GARLIC | <span class="n">🧄︎</span> | <span class="n">🧄</span> | <span class="n">🧄️</span> | Emoji
@@ -764,6 +769,7 @@ Base Codepoint | Name | Text, +VS15 | Default, no VS | Emoji, +VS16 | Default Sh
 <span class="u">U+1F6A6</span> | VERTICAL TRAFFIC LIGHT | <span class="n">🚦︎</span> | <span class="n">🚦</span> | <span class="n">🚦️</span> | Emoji
 <span class="u">U+1F6D1</span> | OCTAGONAL SIGN | <span class="n">🛑︎</span> | <span class="n">🛑</span> | <span class="n">🛑️</span> | Emoji
 <span class="u">U+1F6A7</span> | CONSTRUCTION SIGN | <span class="n">🚧︎</span> | <span class="n">🚧</span> | <span class="n">🚧️</span> | Emoji
+<span class="u">U+1F6D9</span> | LIGHTHOUSE | <span class="n">🛙︎</span> | <span class="n">🛙</span> | <span class="n">🛙️</span> | Emoji
 <span class="u">U+2693</span> | ANCHOR | <span class="n">⚓︎</span> | <span class="n">⚓</span> | <span class="n">⚓️</span> | Emoji
 <span class="u">U+1F6DF</span> | RING BUOY | <span class="n">🛟︎</span> | <span class="n">🛟</span> | <span class="n">🛟️</span> | Emoji
 <span class="u">U+26F5</span> | SAILBOAT | <span class="n">⛵︎</span> | <span class="n">⛵</span> | <span class="n">⛵️</span> | Emoji
@@ -863,6 +869,7 @@ Base Codepoint | Name | Text, +VS15 | Default, no VS | Emoji, +VS16 | Default Sh
 <span class="u">U+2603</span> | SNOWMAN | <span class="n">☃︎</span> | <span class="n">☃</span> | <span class="n">☃️</span> | Text
 <span class="u">U+26C4</span> | SNOWMAN WITHOUT SNOW | <span class="n">⛄︎</span> | <span class="n">⛄</span> | <span class="n">⛄️</span> | Emoji
 <span class="u">U+2604</span> | COMET | <span class="n">☄︎</span> | <span class="n">☄</span> | <span class="n">☄️</span> | Text
+<span class="u">U+1FA8B</span> | METEOR | <span class="n">🪋︎</span> | <span class="n">🪋</span> | <span class="n">🪋️</span> | Emoji
 <span class="u">U+1F525</span> | FIRE | <span class="n">🔥︎</span> | <span class="n">🔥</span> | <span class="n">🔥️</span> | Emoji
 <span class="u">U+1F4A7</span> | DROPLET | <span class="n">💧︎</span> | <span class="n">💧</span> | <span class="n">💧️</span> | Emoji
 <span class="u">U+1F30A</span> | WATER WAVE | <span class="n">🌊︎</span> | <span class="n">🌊</span> | <span class="n">🌊️</span> | Emoji
@@ -1113,6 +1120,7 @@ Base Codepoint | Name | Text, +VS15 | Default, no VS | Emoji, +VS16 | Default Sh
 <span class="u">U+1F58C</span> | LOWER LEFT PAINTBRUSH | <span class="n">🖌︎</span> | <span class="n">🖌</span> | <span class="n">🖌️</span> | Text
 <span class="u">U+1F58D</span> | LOWER LEFT CRAYON | <span class="n">🖍︎</span> | <span class="n">🖍</span> | <span class="n">🖍️</span> | Text
 <span class="u">U+1F4DD</span> | MEMO | <span class="n">📝︎</span> | <span class="n">📝</span> | <span class="n">📝️</span> | Emoji
+<span class="u">U+1FA8C</span> | ERASER | <span class="n">🪌︎</span> | <span class="n">🪌</span> | <span class="n">🪌️</span> | Emoji
 <span class="u">U+1F4BC</span> | BRIEFCASE | <span class="n">💼︎</span> | <span class="n">💼</span> | <span class="n">💼️</span> | Emoji
 <span class="u">U+1F4C1</span> | FILE FOLDER | <span class="n">📁︎</span> | <span class="n">📁</span> | <span class="n">📁️</span> | Emoji
 <span class="u">U+1F4C2</span> | OPEN FILE FOLDER | <span class="n">📂︎</span> | <span class="n">📂</span> | <span class="n">📂️</span> | Emoji
@@ -1142,6 +1150,7 @@ Base Codepoint | Name | Text, +VS15 | Default, no VS | Emoji, +VS16 | Default Sh
 <span class="u">U+1F510</span> | CLOSED LOCK WITH KEY | <span class="n">🔐︎</span> | <span class="n">🔐</span> | <span class="n">🔐️</span> | Emoji
 <span class="u">U+1F511</span> | KEY | <span class="n">🔑︎</span> | <span class="n">🔑</span> | <span class="n">🔑️</span> | Emoji
 <span class="u">U+1F5DD</span> | OLD KEY | <span class="n">🗝︎</span> | <span class="n">🗝</span> | <span class="n">🗝️</span> | Text
+<span class="u">U+1FA8D</span> | NET WITH HANDLE | <span class="n">🪍︎</span> | <span class="n">🪍</span> | <span class="n">🪍️</span> | Emoji
 <span class="u">U+1F528</span> | HAMMER | <span class="n">🔨︎</span> | <span class="n">🔨</span> | <span class="n">🔨️</span> | Emoji
 <span class="u">U+1FA93</span> | AXE | <span class="n">🪓︎</span> | <span class="n">🪓</span> | <span class="n">🪓️</span> | Emoji
 <span class="u">U+26CF</span> | PICK | <span class="n">⛏︎</span> | <span class="n">⛏</span> | <span class="n">⛏️</span> | Text

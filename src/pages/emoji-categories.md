@@ -123,6 +123,7 @@ FACE WITH TEARS OF JOY| <span class="f">😂</span> | U+1F602
 SLIGHTLY SMILING FACE| <span class="f">🙂</span> | U+1F642
 UPSIDE-DOWN FACE| <span class="f">🙃</span> | U+1F643
 MELTING FACE| <span class="f">🫠</span> | U+1FAE0
+CRACKING FACE| <span class="f">🫫</span> | U+1FAEB
 WINKING FACE| <span class="f">😉</span> | U+1F609
 SMILING FACE WITH SMILING EYES| <span class="f">😊</span> | U+1F60A
 SMILING FACE WITH HALO| <span class="f">😇</span> | U+1F607
@@ -554,6 +555,18 @@ THUMBS DOWN: MEDIUM-LIGHT SKIN TONE| <span class="f">👎🏼</span> | U+1F44E<b
 THUMBS DOWN: MEDIUM SKIN TONE| <span class="f">👎🏽</span> | U+1F44E<br/>U+1F3FD
 THUMBS DOWN: MEDIUM-DARK SKIN TONE| <span class="f">👎🏾</span> | U+1F44E<br/>U+1F3FE
 THUMBS DOWN: DARK SKIN TONE| <span class="f">👎🏿</span> | U+1F44E<br/>U+1F3FF
+LEFTWARDS THUMB SIGN| <span class="f">🫹</span> | U+1FAF9
+LEFTWARDS THUMB SIGN: LIGHT SKIN TONE| <span class="f">🫹🏻</span> | U+1FAF9<br/>U+1F3FB
+LEFTWARDS THUMB SIGN: MEDIUM-LIGHT SKIN TONE| <span class="f">🫹🏼</span> | U+1FAF9<br/>U+1F3FC
+LEFTWARDS THUMB SIGN: MEDIUM SKIN TONE| <span class="f">🫹🏽</span> | U+1FAF9<br/>U+1F3FD
+LEFTWARDS THUMB SIGN: MEDIUM-DARK SKIN TONE| <span class="f">🫹🏾</span> | U+1FAF9<br/>U+1F3FE
+LEFTWARDS THUMB SIGN: DARK SKIN TONE| <span class="f">🫹🏿</span> | U+1FAF9<br/>U+1F3FF
+RIGHTWARDS THUMB SIGN| <span class="f">🫺</span> | U+1FAFA
+RIGHTWARDS THUMB SIGN: LIGHT SKIN TONE| <span class="f">🫺🏻</span> | U+1FAFA<br/>U+1F3FB
+RIGHTWARDS THUMB SIGN: MEDIUM-LIGHT SKIN TONE| <span class="f">🫺🏼</span> | U+1FAFA<br/>U+1F3FC
+RIGHTWARDS THUMB SIGN: MEDIUM SKIN TONE| <span class="f">🫺🏽</span> | U+1FAFA<br/>U+1F3FD
+RIGHTWARDS THUMB SIGN: MEDIUM-DARK SKIN TONE| <span class="f">🫺🏾</span> | U+1FAFA<br/>U+1F3FE
+RIGHTWARDS THUMB SIGN: DARK SKIN TONE| <span class="f">🫺🏿</span> | U+1FAFA<br/>U+1F3FF
 RAISED FIST| <span class="f">✊</span> | U+270A
 RAISED FIST: LIGHT SKIN TONE| <span class="f">✊🏻</span> | U+270A<br/>U+1F3FB
 RAISED FIST: MEDIUM-LIGHT SKIN TONE| <span class="f">✊🏼</span> | U+270A<br/>U+1F3FC
@@ -3021,6 +3034,7 @@ Name | Emoji | Codepoint/s
 -|-|-
 SNAIL| <span class="f">🐌</span> | U+1F40C
 BUTTERFLY| <span class="f">🦋</span> | U+1F98B
+MONARCH BUTTERFLY| <span class="f">🫌</span> | U+1FACC
 BUG| <span class="f">🐛</span> | U+1F41B
 ANT| <span class="f">🐜</span> | U+1F41C
 HONEYBEE| <span class="f">🐝</span> | U+1F41D
@@ -3114,6 +3128,7 @@ EAR OF MAIZE| <span class="f">🌽</span> | U+1F33D
 HOT PEPPER | <span class="f">🌶️</span> | U+1F336<br/>U+FE0F
 BELL PEPPER| <span class="f">🫑</span> | U+1FAD1
 CUCUMBER| <span class="f">🥒</span> | U+1F952
+PICKLE| <span class="f">🫝</span> | U+1FADD
 LEAFY GREEN| <span class="f">🥬</span> | U+1F96C
 BROCCOLI| <span class="f">🥦</span> | U+1F966
 GARLIC| <span class="f">🧄</span> | U+1F9C4
@@ -3396,6 +3411,7 @@ CONSTRUCTION SIGN| <span class="f">🚧</span> | U+1F6A7
 
 Name | Emoji | Codepoint/s
 -|-|-
+LIGHTHOUSE| <span class="f">🛙</span> | U+1F6D9
 ANCHOR| <span class="f">⚓</span> | U+2693
 RING BUOY| <span class="f">🛟</span> | U+1F6DF
 SAILBOAT| <span class="f">⛵</span> | U+26F5
@@ -3515,6 +3531,7 @@ SNOWFLAKE | <span class="f">❄️</span> | U+2744<br/>U+FE0F
 SNOWMAN | <span class="f">☃️</span> | U+2603<br/>U+FE0F
 SNOWMAN WITHOUT SNOW| <span class="f">⛄</span> | U+26C4
 COMET | <span class="f">☄️</span> | U+2604<br/>U+FE0F
+METEOR| <span class="f">🪋</span> | U+1FA8B
 FIRE| <span class="f">🔥</span> | U+1F525
 DROPLET| <span class="f">💧</span> | U+1F4A7
 WATER WAVE| <span class="f">🌊</span> | U+1F30A
@@ -3849,6 +3866,7 @@ LOWER LEFT BALLPOINT PEN | <span class="f">🖊️</span> | U+1F58A<br/>U+FE0F
 LOWER LEFT PAINTBRUSH | <span class="f">🖌️</span> | U+1F58C<br/>U+FE0F
 LOWER LEFT CRAYON | <span class="f">🖍️</span> | U+1F58D<br/>U+FE0F
 MEMO| <span class="f">📝</span> | U+1F4DD
+ERASER| <span class="f">🪌</span> | U+1FA8C
 
 ### Office
 
@@ -3893,6 +3911,7 @@ OLD KEY | <span class="f">🗝️</span> | U+1F5DD<br/>U+FE0F
 
 Name | Emoji | Codepoint/s
 -|-|-
+NET WITH HANDLE| <span class="f">🪍</span> | U+1FA8D
 HAMMER| <span class="f">🔨</span> | U+1F528
 AXE| <span class="f">🪓</span> | U+1FA93
 PICK | <span class="f">⛏️</span> | U+26CF<br/>U+FE0F
@@ -4405,7 +4424,7 @@ FLAG: GUAM| <span class="f">🇬🇺</span> | U+1F1EC<br/>U+1F1FA
 FLAG: GUINEA-BISSAU| <span class="f">🇬🇼</span> | U+1F1EC<br/>U+1F1FC
 FLAG: GUYANA| <span class="f">🇬🇾</span> | U+1F1EC<br/>U+1F1FE
 FLAG: HONG KONG SAR CHINA| <span class="f">🇭🇰</span> | U+1F1ED<br/>U+1F1F0
-FLAG: HEARD & MCDONALD ISLANDS| <span class="f">🇭🇲</span> | U+1F1ED<br/>U+1F1F2
+FLAG: HEARD ISLAND & MCDONALD ISLANDS| <span class="f">🇭🇲</span> | U+1F1ED<br/>U+1F1F2
 FLAG: HONDURAS| <span class="f">🇭🇳</span> | U+1F1ED<br/>U+1F1F3
 FLAG: CROATIA| <span class="f">🇭🇷</span> | U+1F1ED<br/>U+1F1F7
 FLAG: HAITI| <span class="f">🇭🇹</span> | U+1F1ED<br/>U+1F1F9
@@ -4509,7 +4528,7 @@ FLAG: SEYCHELLES| <span class="f">🇸🇨</span> | U+1F1F8<br/>U+1F1E8
 FLAG: SUDAN| <span class="f">🇸🇩</span> | U+1F1F8<br/>U+1F1E9
 FLAG: SWEDEN| <span class="f">🇸🇪</span> | U+1F1F8<br/>U+1F1EA
 FLAG: SINGAPORE| <span class="f">🇸🇬</span> | U+1F1F8<br/>U+1F1EC
-FLAG: ST. HELENA| <span class="f">🇸🇭</span> | U+1F1F8<br/>U+1F1ED
+FLAG: ST. HELENA, ASCENSION & TRISTAN DA CUNHA| <span class="f">🇸🇭</span> | U+1F1F8<br/>U+1F1ED
 FLAG: SLOVENIA| <span class="f">🇸🇮</span> | U+1F1F8<br/>U+1F1EE
 FLAG: SVALBARD & JAN MAYEN| <span class="f">🇸🇯</span> | U+1F1F8<br/>U+1F1EF
 FLAG: SLOVAKIA| <span class="f">🇸🇰</span> | U+1F1F8<br/>U+1F1F0
@@ -4527,7 +4546,7 @@ FLAG: ESWATINI| <span class="f">🇸🇿</span> | U+1F1F8<br/>U+1F1FF
 FLAG: TRISTAN DA CUNHA| <span class="f">🇹🇦</span> | U+1F1F9<br/>U+1F1E6
 FLAG: TURKS & CAICOS ISLANDS| <span class="f">🇹🇨</span> | U+1F1F9<br/>U+1F1E8
 FLAG: CHAD| <span class="f">🇹🇩</span> | U+1F1F9<br/>U+1F1E9
-FLAG: FRENCH SOUTHERN TERRITORIES| <span class="f">🇹🇫</span> | U+1F1F9<br/>U+1F1EB
+FLAG: FRENCH SOUTHERN AND ANTARCTIC LANDS| <span class="f">🇹🇫</span> | U+1F1F9<br/>U+1F1EB
 FLAG: TOGO| <span class="f">🇹🇬</span> | U+1F1F9<br/>U+1F1EC
 FLAG: THAILAND| <span class="f">🇹🇭</span> | U+1F1F9<br/>U+1F1ED
 FLAG: TAJIKISTAN| <span class="f">🇹🇯</span> | U+1F1F9<br/>U+1F1EF
