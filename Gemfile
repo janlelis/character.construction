@@ -1,8 +1,8 @@
 source 'https://rubygems.org'
 
 # Unicode gems
-gem "unicode-x", "~> 17.0"
-gem "characteristics"
+gem "unicode-x", "~> 18.0"
+gem "characteristics", ">= 1.9.0"
 gem "symbolify"
 gem "az", "~> 2.1"
 
